@@ -1236,6 +1236,47 @@ body.nav-open .mobile-menu li:nth-child(5) a { transition-delay: 0.43s; }
 .topbar__cta { display: none; }
 
 /* ============ BREAKPOINT ============ */
+/* Solo mobile: la stat "pezzi forgiati ogni anno" sparisce (visibility:
+   hidden, così il suo ingombro resta e titolo+lead non cambiano quota);
+   i due CTA della hero escono dal flusso e si ancorano in fondo alla
+   schermata, affiancati — il padding-bottom sul blocco centrale compensa
+   l'altezza che occupavano in colonna, sempre per non muovere il titolo.
+   Font dei bottoni in clamp() su vw così FR/DE stanno su una riga anche
+   a 320px. */
+@media (max-width: 639.98px) {
+  .home__bottom { visibility: hidden; }
+  .section--hero { position: relative; }
+  .section--hero .view__center { padding-bottom: 138px; }
+  .home__cta {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 18px;
+    margin-top: 0;
+    flex-direction: row;
+    gap: 8px;
+    /* Niente reveal: incollato al bordo basso resta fuori dal rootMargin
+       dell'observer (-8%) e non diventerebbe mai visibile */
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+  .home__cta .btn-pill--lg,
+  .home__cta .btn-ghost {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: clamp(0.68rem, 3.2vw, 0.9rem);
+  }
+  .home__cta .btn-pill--lg { padding: 8px 8px 8px 14px; gap: 7px; }
+  .home__cta .btn-pill--lg .btn-pill__circle { width: 26px; height: 26px; flex-shrink: 0; }
+  .home__cta .btn-ghost { padding: 8px 12px; }
+  /* Titolo hero: rosso e bianco invertiti rispetto al desktop */
+  .home__title { color: var(--coral); }
+  .home__title .coral { color: var(--white); }
+}
+
 @media (min-width: 640px) {
   .home__cta { flex-direction: row; }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
