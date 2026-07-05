@@ -280,7 +280,10 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   max-width: 1232px;
   margin: 0 auto;
   padding: 72px 16px;
-  scroll-margin-top: 94px;
+  /* Punto di arrivo dell'ancora un po' sotto la navbar (80px reali da mobile),
+     cosi' il titolo atterra alla stessa altezza di #contatti invece di lasciare
+     tutto il padding della sezione vuoto sotto la barra. */
+  scroll-margin-top: 57px;
 }
 
 .section--hero {
@@ -1304,7 +1307,10 @@ body.nav-open .mobile-menu li:nth-child(5) a { transition-delay: 0.43s; }
   .lang-toggle { display: flex; }
   .lang-dropdown { display: none; }
   .nav-toggle { display: none; }
-  .section { padding: 96px 16px; scroll-margin-top: 110px; }
+  /* Punto di arrivo dell'ancora un po' sotto la navbar (90px reali da desktop),
+     cosi' il titolo (es. Blog) atterra alla stessa altezza di #prodotti invece
+     di lasciare tutto il padding della sezione vuoto sotto la barra. */
+  .section { padding: 96px 16px; scroll-margin-top: 44px; }
   .section--hero { padding-top: 150px; padding-bottom: 56px; }
   /* Da desktop il blocco hero (titolo, testo, CTA) è spostato un po' verso
      sinistra rispetto al centro, per dare più respiro sul lato destro.
