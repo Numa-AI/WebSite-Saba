@@ -1277,6 +1277,17 @@ body.nav-open .mobile-menu li:nth-child(5) a { transition-delay: 0.43s; }
   .home__title .coral { color: var(--white); }
 }
 
+/* Solo mobile: interlinea dei testi correnti un po' piu' compatta
+   (i titoli restano come sono) */
+@media (max-width: 639.98px) {
+  .view__lead,
+  .home__lead { line-height: 1.45; }
+  .about-card p,
+  .plant p { line-height: 1.45; }
+  .product p { line-height: 1.4; }
+  .article__body p { line-height: 1.5; }
+}
+
 @media (min-width: 640px) {
   .home__cta { flex-direction: row; }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
