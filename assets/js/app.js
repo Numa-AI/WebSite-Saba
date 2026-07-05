@@ -287,6 +287,56 @@
     }
   }
 
+  /* ---------- Frecce carosello blog ----------
+     Da desktop il blog è una riga scorribile: le frecce avanti/indietro girano
+     all'infinito (dalla fine si torna all'inizio e viceversa). */
+  var blogTrack = document.querySelector("[data-blog-track]");
+  var blogPrev = document.querySelector("[data-blog-prev]");
+  var blogNext = document.querySelector("[data-blog-next]");
+  if (blogTrack && (blogPrev || blogNext)) {
+    var blogCards = Array.prototype.slice.call(blogTrack.querySelectorAll(".blog-card"));
+    var blogDetails = Array.prototype.slice.call(blogTrack.querySelectorAll(".article"));
+    var isDesktop = function () { return window.matchMedia("(min-width: 640px)").matches; };
+    var cardStep = function () {
+      var card = blogTrack.querySelector(".blog-card");
+      return card ? card.getBoundingClientRect().width + 14 : blogTrack.clientWidth / 3;
+    };
+    var goBlog = function (dir) {
+      var open = blogTrack.querySelector(".article[open]");
+      if (open) {
+        /* modalità lettura: chiudi l'articolo aperto e apri il prec/succ (loop) */
+        var i = blogCards.indexOf(open.closest(".blog-card"));
+        var n = (i + dir + blogCards.length) % blogCards.length;
+        open.open = false;
+        var d = blogCards[n].querySelector(".article");
+        if (d) d.open = true;
+        return;
+      }
+      var behavior = prefersReduced ? "auto" : "smooth";
+      var max = blogTrack.scrollWidth - blogTrack.clientWidth;
+      var target;
+      if (dir > 0) {
+        target = blogTrack.scrollLeft >= max - 6 ? 0 : Math.min(blogTrack.scrollLeft + cardStep(), max);
+      } else {
+        target = blogTrack.scrollLeft <= 6 ? max : Math.max(blogTrack.scrollLeft - cardStep(), 0);
+      }
+      blogTrack.scrollTo({ left: target, behavior: behavior });
+    };
+    if (blogNext) blogNext.addEventListener("click", function () { goBlog(1); });
+    if (blogPrev) blogPrev.addEventListener("click", function () { goBlog(-1); });
+
+    /* Da desktop un solo articolo aperto alla volta (vista lettura a tutta
+       larghezza); riporto lo scorrimento a inizio così la card piena è intera. */
+    blogDetails.forEach(function (d) {
+      d.addEventListener("toggle", function () {
+        if (d.open && isDesktop()) {
+          blogDetails.forEach(function (o) { if (o !== d) o.open = false; });
+          blogTrack.scrollLeft = 0;
+        }
+      });
+    });
+  }
+
   /* ---------- Anno corrente ---------- */
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();

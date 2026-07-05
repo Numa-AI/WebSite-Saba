@@ -82,6 +82,29 @@ button { font: inherit; cursor: pointer; }
 
 .frame__content { position: relative; z-index: 1; }
 
+/* Sfumatura fissa in cima: scorrendo, i contenuti si dissolvono morbidamente
+   entrando nella fascia alta e lo sfondo appare velato in prossimità della
+   headbar. Sta DENTRO .frame__content (stesso stacking context della navbar):
+   z-20 la tiene sopra i contenuti (<main>, auto) ma sotto la navbar e il CTA
+   "Richiedi preventivo" (.topbar, z-30), che restano nitidi. */
+.frame__content::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  z-index: 20;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 32, 43, 0.96) 0%,
+    rgba(22, 32, 43, 0.86) 20%,
+    rgba(22, 32, 43, 0.52) 55%,
+    rgba(22, 32, 43, 0) 100%
+  );
+}
+
 /* ============ TOPBAR (fissa, flottante) ============ */
 .topbar {
   position: fixed;
@@ -369,6 +392,11 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 
 .home__bottom {
   margin-top: clamp(3.5rem, 11vh, 8rem);
+  /* Abbassata di poco rispetto al flusso, senza toccare la centratura
+     della hero (top invece di transform: non entra in conflitto con il
+     reveal .anim, che azzera il transform quando l'elemento è visibile) */
+  position: relative;
+  top: 26px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -527,11 +555,167 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 }
 .product:hover .product__more { transform: translateX(3px); }
 
+/* ---- Blog: eyebrow di categoria ---- */
+.blog-card__cat {
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+.blog-card h3 { margin-top: 4px; }
+
+/* ---- Blog: articolo espandibile (<details>) ---- */
+.article {
+  margin-top: auto;                 /* tiene il toggle in fondo alla card */
+  border-top: 1px solid var(--glass-border);
+  padding-top: 14px;
+}
+.article__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  list-style: none;
+  cursor: pointer;
+  color: #FFAFA9;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.article__toggle::-webkit-details-marker { display: none; }   /* nasconde il triangolino nativo */
+.article__toggle:hover { color: var(--white); }
+.article__toggle:focus-visible { outline: 2px solid var(--coral); outline-offset: 4px; border-radius: 6px; }
+.article__chev { flex: none; transition: transform 0.3s var(--ease-out); }
+.article[open] .article__chev { transform: rotate(180deg); }
+
+.article__body { padding-top: 14px; max-width: 68ch; }
+.article__body p {
+  margin-top: 11px;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+}
+.article__body p:first-child { margin-top: 0; }
+.article__cta {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #FFAFA9;
+  text-decoration: none;
+  transition: transform 0.25s var(--ease-out);
+}
+.article__cta:hover { color: var(--white); transform: translateX(3px); }
+
+/* ---- Blog: carosello a riga singola con freccia ----
+   Desktop: 3 card visibili su una riga, la 4a si raggiunge con la freccia.
+   Mobile: eredita il carosello a swipe di .product-grid (freccia nascosta). */
+.blog-carousel { position: relative; margin-top: 34px; }
+.blog-carousel .product-grid { margin-top: 0; }
+
+@media (min-width: 640px) {
+  .blog-track {
+    display: flex;
+    align-items: flex-start;        /* aprire un articolo non allunga le vicine */
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .blog-track::-webkit-scrollbar { display: none; }
+  .blog-track > .blog-card {
+    flex: 0 0 calc((100% - 28px) / 3);   /* 3 card visibili (2 gap da 14px) */
+    scroll-snap-align: start;
+    opacity: 1;                          /* nel carosello niente reveal a scaglioni */
+    transform: none;
+    filter: none;
+  }
+
+  /* Modalità lettura (desktop): aprire un articolo lo porta a tutta larghezza
+     e collassa (nasconde) le altre card; le frecce restano e cambiano articolo. */
+  .blog-track:has(.article[open]) > .blog-card { display: none; }
+  .blog-track > .blog-card:has(.article[open]) {
+    display: flex;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+  .blog-track > .blog-card:has(.article[open]) .product__media {
+    aspect-ratio: auto;
+    height: clamp(240px, 34vh, 380px);
+  }
+}
+
+/* Freccia di scorrimento: solo da desktop, dove non c'è lo swipe */
+.blog-nav {
+  position: absolute;
+  top: 116px;                 /* sulla fascia immagine, sia in carosello sia in lettura */
+  right: -8px;
+  width: 46px;
+  height: 46px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--white);
+  background: var(--coral);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.2s, transform 0.2s var(--ease-out);
+  z-index: 5;
+}
+.blog-nav:hover { background: var(--coral-dark); transform: scale(1.08); }
+.blog-nav:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
+.blog-nav[hidden] { display: none !important; }
+.blog-nav--prev { left: -8px; right: auto; }
+.blog-nav--next { right: -8px; left: auto; }
+@media (min-width: 640px) { .blog-nav { display: inline-flex; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .article__chev { transition: none; }
+  .blog-track { scroll-behavior: auto; }
+}
+
+/* Da mobile la griglia prodotti diventa un carosello scorribile in orizzontale:
+   la card al centro è ben visibile, le due adiacenti sbirciano ai lati e sfumano
+   verso lo sfondo. Sotto i 640px; sopra torna la griglia (2 e poi 3 colonne). */
+@media (max-width: 639.98px) {
+  .product-grid {
+    display: flex;
+    align-items: flex-start;       /* aprire un articolo non allunga le card vicine */
+    gap: 14px;
+    margin-inline: -16px;          /* a tutta larghezza, oltre il padding della sezione */
+    padding-inline: 13vw;          /* centra la prima/ultima card e lascia spazio alle vicine */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;         /* Firefox: nasconde la barra di scorrimento */
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 26%, #000 74%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 26%, #000 74%, transparent 100%);
+  }
+  .product-grid::-webkit-scrollbar { display: none; }   /* WebKit/Blink: idem */
+
+  .product {
+    flex: 0 0 74vw;                /* card centrale ~3/4 schermo, le vicine restano visibili */
+    scroll-snap-align: center;
+    /* nel carosello le card sono sempre presenti: niente reveal a scaglioni
+       (le vicine sbirciano oltre la soglia del reveal e resterebbero invisibili) */
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
 /* ============ STABILIMENTI ============ */
 .plant-layout {
-  margin-top: 22px;
+  margin-top: 26px;
   display: grid;
-  gap: 12px;
+  gap: 18px;
 }
 .plant-video {
   padding: 0;
@@ -547,14 +731,14 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 
 .plant-grid {
   display: grid;
-  gap: 14px;
+  gap: 18px;
   grid-template-columns: 1fr;
 }
 .plant {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 18px 20px;
+  padding: 22px 26px;
   transition: background-color 0.25s, transform 0.3s var(--ease-out);
 }
 /* Nodo di flusso 01 → 02 → 03: cerchietto con freccia a ponte
@@ -580,10 +764,16 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 .plant__top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
+}
+.plant__head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
 }
 .plant__tag {
+  flex-shrink: 0;
   display: inline-flex;
   padding: 4px 12px;
   border-radius: 999px;
@@ -600,16 +790,16 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
 }
-.plant h3 { margin-top: 12px; color: var(--white); font-size: 1.05rem; font-weight: 600; }
+.plant h3 { color: var(--white); font-size: 1.05rem; font-weight: 600; line-height: 1.2; }
 .plant p {
-  margin-top: 6px;
+  margin-top: 12px;
   font-size: 0.85rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: rgba(255, 255, 255, 0.85);
 }
 .plant__foot {
   margin-top: auto;
-  padding-top: 12px;
+  padding-top: 16px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -701,7 +891,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 }
 
 /* ============ MAPPA STABILIMENTI (Leaflet, in tema) ============ */
-/* Nella colonna sinistra dei Contatti, sotto i recapiti, con
+/* In fondo alla sezione Stabilimenti, sotto il blocco Sostenibilità, con
    etichetta "Dove siamo" in overlay: niente fascia a tutta pagina */
 .contact-map {
   position: relative;
@@ -1058,6 +1248,11 @@ body.nav-open .mobile-menu li:nth-child(5) a { transition-delay: 0.43s; }
   .nav-toggle { display: none; }
   .section { padding: 96px 16px; scroll-margin-top: 110px; }
   .section--hero { padding-top: 150px; padding-bottom: 56px; }
+  /* Da desktop il blocco hero (titolo, testo, CTA) è spostato un po' verso
+     sinistra rispetto al centro, per dare più respiro sul lato destro.
+     Shift proporzionale alla larghezza: modesto e senza spingere il titolo
+     (white-space: nowrap) oltre il bordo dello schermo. */
+  .section--hero .view__center { transform: translateX(clamp(-13rem, -10vw, -3rem)); }
   .section--clients { padding-top: 24px; padding-bottom: 72px; }
   #contatti { scroll-margin-top: 0; }
   .home__pills { display: flex; }
@@ -1102,7 +1297,7 @@ body.nav-open .mobile-menu li:nth-child(5) a { transition-delay: 0.43s; }
     padding-bottom: 40px;
   }
   .plant-title { white-space: nowrap; }
-  .plant-layout { grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .plant-layout { grid-template-columns: 0.78fr 1.22fr; gap: 24px; align-items: stretch; }
   .plant-video video { aspect-ratio: auto; }
   #contatti { padding-top: 132px; padding-bottom: 40px; }
 }
