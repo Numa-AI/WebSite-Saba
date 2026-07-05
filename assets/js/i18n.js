@@ -1,19 +1,19 @@
 /* ============================================================
-   SABA — Internazionalizzazione IT / EN / FR / DE
+   SABA — Internazionalizzazione IT / EN / FR / DE / ES
    L'italiano è il testo di default presente nell'HTML.
    Le altre lingue vivono in attributi accanto al testo italiano,
    così restano sempre sincronizzate quando si modifica un testo:
-     - data-en / data-fr / data-de          -> textContent
+     - data-en / data-fr / data-de / data-es -> textContent
        (oppure innerHTML se l'elemento ha anche data-html;
         oppure l'attributo content per i <meta>)
-     - data-en-placeholder / -fr- / -de-     -> attributo placeholder
-     - data-en-aria / -fr- / -de-            -> attributo aria-label
+     - data-en-placeholder / -fr- / -de- / -es- -> attributo placeholder
+     - data-en-aria / -fr- / -de- / -es-        -> attributo aria-label
    Se manca la traduzione per una lingua, si ricade sull'italiano.
    ============================================================ */
 (function () {
   "use strict";
   var KEY = "saba-lang";
-  var LANGS = ["it", "en", "fr", "de"];
+  var LANGS = ["it", "en", "fr", "de", "es"];
   var cached = false;
 
   function getStored() {

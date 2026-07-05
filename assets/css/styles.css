@@ -6,6 +6,28 @@
    La sezione Contatti ha uno sfondo fotografico proprio.
    ============================================================ */
 
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../vendor/fonts/space-grotesk.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../vendor/fonts/space-mono-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../vendor/fonts/space-mono-700.woff2") format("woff2");
+}
+
 :root {
   --ink: #16202B;
   --coral: #F8463A;
@@ -141,11 +163,7 @@ button { font: inherit; cursor: pointer; }
   color: var(--ink);
 }
 .brand__mark { height: 34px; width: auto; display: block; }
-.brand__name {
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: 0.04em;
-}
+.brand__name { height: 18px; width: auto; display: block; }
 
 .nav-links {
   display: none;
@@ -169,30 +187,6 @@ button { font: inherit; cursor: pointer; }
 }
 
 .nav-tools { display: flex; align-items: center; gap: 12px; }
-
-.lang-toggle {
-  display: none;
-  align-items: center;
-  gap: 2px;
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-}
-.lang-toggle button {
-  border: 0;
-  background: transparent;
-  color: rgba(22, 32, 43, 0.5);
-  padding: 5px 7px;
-  border-radius: 999px;
-  font-family: inherit;
-  font-size: inherit;
-  transition: color 0.2s, background-color 0.2s;
-}
-.lang-toggle button:hover { color: var(--ink); }
-.lang-toggle button[aria-pressed="true"] {
-  color: var(--white);
-  background: var(--coral);
-  font-weight: 700;
-}
 
 /* Hamburger */
 .nav-toggle {
@@ -1073,6 +1067,9 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   font-size: 0.85rem;
 }
 .form__status.is-visible { display: block; }
+/* Honeypot anti-spam per Web3Forms: fuori schermo invece di display:none,
+   che alcuni bot riconoscono ed evitano di compilare. */
+.form__botcheck { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* ============ PIÈ DI PAGINA ============ */
 .frame-foot {
@@ -1156,6 +1153,8 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   font-weight: 700;
   background: rgba(248, 70, 58, 0.1);
 }
+.lang-flag { margin-right: 8px; vertical-align: -2px; border-radius: 2px; flex-shrink: 0; }
+.lang-dropdown__current { display: inline-flex; align-items: center; }
 
 /* ============ MENU MOBILE ============ */
 /* Pannello scuro a tutta pagina che scende dall'alto, come il resto
@@ -1304,8 +1303,6 @@ body.nav-open .mobile-menu li:nth-child(5) a { transition-delay: 0.43s; }
   .topbar { top: 18px; padding: 0 16px; }
   .nav-pill { padding: 17px 30px; }
   .nav-links { display: flex; }
-  .lang-toggle { display: flex; }
-  .lang-dropdown { display: none; }
   .nav-toggle { display: none; }
   /* Punto di arrivo dell'ancora un po' sotto la navbar (90px reali da desktop),
      cosi' il titolo (es. Blog) atterra alla stessa altezza di #prodotti invece

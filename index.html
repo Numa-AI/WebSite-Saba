@@ -4,17 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saba</title>
-  <meta name="description" data-en="Hot forging of mulcher hammers, harrow tines and spare parts for agricultural machinery. Three plants, certified quality, worldwide shipping." data-fr="Forgeage à chaud de marteaux de broyeur, dents de herse et pièces de rechange pour machines agricoles. Trois sites, qualité certifiée, expéditions dans le monde entier." data-de="Warmschmieden von Mulchhämmern, Eggenzinken und Ersatzteilen für Landmaschinen. Drei Standorte, zertifizierte Qualität, weltweiter Versand." content="Forgiatura a caldo di mazze trinciasermenti, denti per erpice e ricambi per macchine agricole. Tre stabilimenti, qualità certificata, spedizioni in tutto il mondo." />
+  <meta name="description" data-en="Hot forging of mulcher hammers, harrow tines and spare parts for agricultural machinery. Three plants, certified quality, worldwide shipping." data-fr="Forgeage à chaud de marteaux de broyeur, dents de herse et pièces de rechange pour machines agricoles. Trois sites, qualité certifiée, expéditions dans le monde entier." data-de="Warmschmieden von Mulchhämmern, Eggenzinken und Ersatzteilen für Landmaschinen. Drei Standorte, zertifizierte Qualität, weltweiter Versand." data-es="Forjado en caliente de mazas para trituradoras, dientes de grada y recambios para maquinaria agrícola. Tres plantas, calidad certificada, envíos a todo el mundo." content="Forgiatura a caldo di mazze trinciasermenti, denti per erpice e ricambi per macchine agricole. Tre stabilimenti, qualità certificata, spedizioni in tutto il mondo." />
   <meta name="theme-color" content="#16202B" />
   <link rel="icon" href="assets/img/saba-mark.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/vendor/leaflet.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main" data-en="Skip to content" data-fr="Aller au contenu" data-de="Zum Inhalt springen">Vai al contenuto</a>
+  <a class="skip-link" href="#main" data-en="Skip to content" data-fr="Aller au contenu" data-de="Zum Inhalt springen" data-es="Ir al contenido">Vai al contenuto</a>
 
   <div class="page">
     <section class="frame">
@@ -34,41 +31,36 @@
           <div class="nav-pill">
             <a class="brand" href="#home" aria-label="SABA, Home">
               <img class="brand__mark" src="assets/img/saba-mark.png" alt="" width="300" height="296" />
-              <span class="brand__name">SABA</span>
+              <img class="brand__name" src="assets/img/saba-wordmark.png" alt="" width="531" height="115" />
             </a>
             <ul class="nav-links">
-              <li><a href="#home" aria-current="page" data-en="Home" data-fr="Accueil" data-de="Startseite">Home</a></li>
-              <li><a href="#azienda" data-en="Company" data-fr="Entreprise" data-de="Unternehmen">Azienda</a></li>
-              <li><a href="#prodotti" data-en="Products" data-fr="Produits" data-de="Produkte">Prodotti</a></li><li><a href="#blog" data-en="Blog" data-fr="Blog" data-de="Blog">Blog</a></li>
-              <li><a href="#stabilimenti" data-en="Plants" data-fr="Sites" data-de="Standorte">Stabilimenti</a></li>
-              <li><a href="#contatti" data-en="Contact" data-fr="Contact" data-de="Kontakt">Contatti</a></li>
+              <li><a href="#home" aria-current="page" data-en="Home" data-fr="Accueil" data-de="Startseite" data-es="Inicio">Home</a></li>
+              <li><a href="#azienda" data-en="Company" data-fr="Entreprise" data-de="Unternehmen" data-es="Empresa">Azienda</a></li>
+              <li><a href="#prodotti" data-en="Products" data-fr="Produits" data-de="Produkte" data-es="Productos">Prodotti</a></li><li><a href="#blog" data-en="Blog" data-fr="Blog" data-de="Blog" data-es="Blog">Blog</a></li>
+              <li><a href="#stabilimenti" data-en="Plants" data-fr="Sites" data-de="Standorte" data-es="Plantas">Stabilimenti</a></li>
+              <li><a href="#contatti" data-en="Contact" data-fr="Contact" data-de="Kontakt" data-es="Contacto">Contatti</a></li>
             </ul>
             <div class="nav-tools">
-              <div class="lang-toggle" role="group" aria-label="Lingua / Language">
-                <button type="button" data-lang="it" aria-pressed="true">IT</button>
-                <button type="button" data-lang="en" aria-pressed="false">EN</button>
-                <button type="button" data-lang="fr" aria-pressed="false">FR</button>
-                <button type="button" data-lang="de" aria-pressed="false">DE</button>
-              </div>
               <div class="lang-dropdown" data-lang-dropdown>
                 <button class="lang-dropdown__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Lingua / Language">
-                  <span class="lang-dropdown__current" data-lang-current>IT</span>
+                  <span class="lang-dropdown__current" data-lang-current><svg class="lang-flag" width="18" height="13" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg> IT</span>
                   <svg class="lang-dropdown__chev" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
                 <ul class="lang-dropdown__menu" role="menu">
-                  <li><button type="button" role="menuitem" data-lang="it" aria-pressed="true">Italiano</button></li>
-                  <li><button type="button" role="menuitem" data-lang="en" aria-pressed="false">English</button></li>
-                  <li><button type="button" role="menuitem" data-lang="fr" aria-pressed="false">Français</button></li>
-                  <li><button type="button" role="menuitem" data-lang="de" aria-pressed="false">Deutsch</button></li>
+                  <li><button type="button" role="menuitem" data-lang="it" aria-pressed="true"><svg class="lang-flag" width="18" height="13" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg>Italiano</button></li>
+                  <li><button type="button" role="menuitem" data-lang="en" aria-pressed="false"><svg class="lang-flag" width="18" height="13" viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#012169"/><path d="M0 0L60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0L60 30M60 0L0 30" stroke="#c8102e" stroke-width="2"/><path d="M30 0V30M0 15H60" stroke="#fff" stroke-width="10"/><path d="M30 0V30M0 15H60" stroke="#c8102e" stroke-width="6"/></svg>English</button></li>
+                  <li><button type="button" role="menuitem" data-lang="fr" aria-pressed="false"><svg class="lang-flag" width="18" height="13" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#0055a4"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ef4135"/></svg>Français</button></li>
+                  <li><button type="button" role="menuitem" data-lang="de" aria-pressed="false"><svg class="lang-flag" width="18" height="13" viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#dd0000"/><rect y="2" width="5" height="1" fill="#ffce00"/></svg>Deutsch</button></li>
+                  <li><button type="button" role="menuitem" data-lang="es" aria-pressed="false"><svg class="lang-flag" width="18" height="13" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#aa151b"/><rect y="0.5" width="3" height="1" fill="#f1bf00"/></svg>Español</button></li>
                 </ul>
               </div>
-              <button class="nav-toggle" aria-label="Apri menu" data-en-aria="Open menu" data-fr-aria="Ouvrir le menu" data-de-aria="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+              <button class="nav-toggle" aria-label="Apri menu" data-en-aria="Open menu" data-fr-aria="Ouvrir le menu" data-de-aria="Menü öffnen" data-es-aria="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
                 <span></span><span></span><span></span>
               </button>
             </div>
           </div>
           <a class="btn-pill topbar__cta" href="#contatti">
-            <span data-en="Get a quote" data-fr="Demander un devis" data-de="Angebot anfordern">Richiedi preventivo</span>
+            <span data-en="Get a quote" data-fr="Demander un devis" data-de="Angebot anfordern" data-es="Solicitar presupuesto">Richiedi preventivo</span>
             <span class="btn-pill__circle" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -82,38 +74,38 @@
           <section class="section section--hero" id="home" aria-label="Home">
             <div class="view__center">
               <h1 class="home__title anim">
-                <span data-en="Forged" data-fr="Forgés" data-de="Geschmiedet">Forgiati</span>
-                <span class="coral" data-en="for the field" data-fr="pour les champs" data-de="für das Feld">per il campo</span>
+                <span data-en="Forged" data-fr="Forgés" data-de="Geschmiedet" data-es="Forjados">Forgiati</span>
+                <span class="coral" data-en="for the field" data-fr="pour les champs" data-de="für das Feld" data-es="para el campo">per il campo</span>
               </h1>
-              <p class="home__lead anim" data-en="Mulcher hammers, harrow tines and hot-forged spare parts for agricultural machinery. Three plants, one standard. Quality, everywhere." data-fr="Marteaux de broyeur, dents de herse et pièces de rechange forgées à chaud pour les machines agricoles. Trois sites, un seul standard. Qualité, partout." data-de="Mulchhämmer, Eggenzinken und warmgeschmiedete Ersatzteile für Landmaschinen. Drei Standorte, ein Standard. Qualität, überall.">Mazze trinciasermenti, denti per erpice e ricambi forgiati a caldo per le macchine agricole. Tre stabilimenti, un unico standard. Qualità, ovunque.</p>
+              <p class="home__lead anim" data-en="Mulcher hammers, harrow tines and hot-forged spare parts for agricultural machinery. Three plants, one standard. Quality, everywhere." data-fr="Marteaux de broyeur, dents de herse et pièces de rechange forgées à chaud pour les machines agricoles. Trois sites, un seul standard. Qualité, partout." data-de="Mulchhämmer, Eggenzinken und warmgeschmiedete Ersatzteile für Landmaschinen. Drei Standorte, ein Standard. Qualität, überall." data-es="Mazas para trituradoras, dientes de grada y recambios forjados en caliente para maquinaria agrícola. Tres plantas, un único estándar. Calidad, en todas partes.">Mazze trinciasermenti, denti per erpice e ricambi forgiati a caldo per le macchine agricole. Tre stabilimenti, un unico standard. Qualità, ovunque.</p>
               <div class="home__cta anim">
                 <a class="btn-pill btn-pill--lg" href="#prodotti">
-                  <span data-en="Explore products" data-fr="Découvrir les produits" data-de="Produkte entdecken">Scopri i prodotti</span>
+                  <span data-en="Explore products" data-fr="Découvrir les produits" data-de="Produkte entdecken" data-es="Descubre los productos">Scopri i prodotti</span>
                   <span class="btn-pill__circle" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
                 </a>
-                <a class="btn-ghost" href="#contatti" data-en="Contact us" data-fr="Contactez-nous" data-de="Kontakt aufnehmen">Contattaci</a>
+                <a class="btn-ghost" href="#contatti" data-en="Contact us" data-fr="Contactez-nous" data-de="Kontakt aufnehmen" data-es="Contáctanos">Contattaci</a>
               </div>
             </div>
             <div class="home__bottom anim">
               <div class="home__chip">
                 <span class="forge-stat__num"><span data-count="2000000">0</span>+</span>
                 <span class="forge-stat__sep" aria-hidden="true"></span>
-                <p class="forge-stat__label" data-en="parts forged every year" data-fr="pièces forgées chaque année" data-de="geschmiedete Teile pro Jahr">pezzi forgiati ogni anno</p>
+                <p class="forge-stat__label" data-en="parts forged every year" data-fr="pièces forgées chaque année" data-de="geschmiedete Teile pro Jahr" data-es="piezas forjadas cada año">pezzi forgiati ogni anno</p>
               </div>
               <ul class="home__pills">
                 <li>
                   <span class="check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                  <span data-en="Hot forging" data-fr="Forgeage à chaud" data-de="Warmschmieden">Forgiatura a caldo</span>
+                  <span data-en="Hot forging" data-fr="Forgeage à chaud" data-de="Warmschmieden" data-es="Forjado en caliente">Forgiatura a caldo</span>
                 </li>
                 <li>
                   <span class="check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                  <span data-en="Selected steels" data-fr="Aciers sélectionnés" data-de="Ausgewählte Stähle">Acciai selezionati</span>
+                  <span data-en="Selected steels" data-fr="Aciers sélectionnés" data-de="Ausgewählte Stähle" data-es="Aceros seleccionados">Acciai selezionati</span>
                 </li>
                 <li>
                   <span class="check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                  <span data-en="Quality, everywhere" data-fr="Qualité, partout" data-de="Qualität, überall">Qualità, ovunque</span>
+                  <span data-en="Quality, everywhere" data-fr="Qualité, partout" data-de="Qualität, überall" data-es="Calidad, en todas partes">Qualità, ovunque</span>
                 </li>
               </ul>
             </div>
@@ -122,9 +114,9 @@
           <!-- ============ CLIENTI (marquee loghi) ============ -->
           <section class="section section--clients" id="clienti" aria-label="Clienti">
             <div class="view__head anim">
-              <h2 class="view__title" data-en="Our clients." data-fr="Nos clients." data-de="Unsere Kunden.">I nostri clienti.</h2>
+              <h2 class="view__title" data-en="Our clients." data-fr="Nos clients." data-de="Unsere Kunden." data-es="Nuestros clientes.">I nostri clienti.</h2>
             </div>
-            <div class="marquee anim" aria-label="Loghi dei clienti" data-en-aria="Client logos" data-fr-aria="Logos des clients" data-de-aria="Kundenlogos">
+            <div class="marquee anim" aria-label="Loghi dei clienti" data-en-aria="Client logos" data-fr-aria="Logos des clients" data-de-aria="Kundenlogos" data-es-aria="Logotipos de los clientes">
               <div class="marquee__track">
                 <ul class="marquee__group">
                   <li><img src="assets/img/logo-lemken.svg" alt="Lemken" loading="lazy" /></li>
@@ -169,35 +161,35 @@
           <!-- ============ AZIENDA ============ -->
           <section class="section section--grid" id="azienda" aria-label="Azienda">
             <div>
-              <h2 class="view__title anim" data-en="We forge reliability for those who work the land." data-fr="Nous forgeons la fiabilité pour ceux qui travaillent la terre." data-de="Wir schmieden Zuverlässigkeit für alle, die das Land bearbeiten.">Forgiamo affidabilità per chi lavora la terra.</h2>
-              <p class="view__lead anim" data-en="For over forty years SABA has been hot-forging wear parts for agricultural machinery. From raw steel to the finished component, every piece is born to resist soil, stones and time." data-fr="Depuis plus de quarante ans, SABA forge à chaud les pièces d'usure des machines agricoles. De l'acier brut au composant fini, chaque pièce est conçue pour résister au terrain, aux pierres et au temps." data-de="Seit über vierzig Jahren schmiedet SABA die Verschleißteile von Landmaschinen im Warmverfahren. Vom Rohstahl bis zum fertigen Bauteil entsteht jedes Teil, um Boden, Steinen und der Zeit standzuhalten.">Da oltre quarant'anni SABA forgia a caldo i componenti d'usura delle macchine agricole. Dall'acciaio grezzo al pezzo finito, ogni componente nasce per resistere al terreno, ai sassi e al tempo.</p>
+              <h2 class="view__title anim" data-en="We forge reliability for those who work the land." data-fr="Nous forgeons la fiabilité pour ceux qui travaillent la terre." data-de="Wir schmieden Zuverlässigkeit für alle, die das Land bearbeiten." data-es="Forjamos fiabilidad para quienes trabajan la tierra.">Forgiamo affidabilità per chi lavora la terra.</h2>
+              <p class="view__lead anim" data-en="For over forty years SABA has been hot-forging wear parts for agricultural machinery. From raw steel to the finished component, every piece is born to resist soil, stones and time." data-fr="Depuis plus de quarante ans, SABA forge à chaud les pièces d'usure des machines agricoles. De l'acier brut au composant fini, chaque pièce est conçue pour résister au terrain, aux pierres et au temps." data-de="Seit über vierzig Jahren schmiedet SABA die Verschleißteile von Landmaschinen im Warmverfahren. Vom Rohstahl bis zum fertigen Bauteil entsteht jedes Teil, um Boden, Steinen und der Zeit standzuhalten." data-es="Desde hace más de cuarenta años SABA forja en caliente los componentes de desgaste de las máquinas agrícolas. Del acero en bruto a la pieza terminada, cada componente nace para resistir el terreno, las piedras y el tiempo.">Da oltre quarant'anni SABA forgia a caldo i componenti d'usura delle macchine agricole. Dall'acciaio grezzo al pezzo finito, ogni componente nasce per resistere al terreno, ai sassi e al tempo.</p>
               <div class="stats anim">
                 <div class="stat glass">
                   <div class="stat__num"><span data-count="40">0</span>+</div>
-                  <div class="stat__label" data-en="Years of experience" data-fr="Années d'expérience" data-de="Jahre Erfahrung">Anni di esperienza</div>
+                  <div class="stat__label" data-en="Years of experience" data-fr="Années d'expérience" data-de="Jahre Erfahrung" data-es="Años de experiencia">Anni di esperienza</div>
                 </div>
                 <div class="stat glass">
                   <div class="stat__num"><span data-count="3">0</span></div>
-                  <div class="stat__label" data-en="Production plants" data-fr="Sites de production" data-de="Produktionsstandorte">Stabilimenti produttivi</div>
+                  <div class="stat__label" data-en="Production plants" data-fr="Sites de production" data-de="Produktionsstandorte" data-es="Plantas de producción">Stabilimenti produttivi</div>
                 </div>
                 <div class="stat glass">
                   <div class="stat__num"><span data-count="30">0</span>+</div>
-                  <div class="stat__label" data-en="Countries served" data-fr="Pays desservis" data-de="Belieferte Länder">Paesi serviti</div>
+                  <div class="stat__label" data-en="Countries served" data-fr="Pays desservis" data-de="Belieferte Länder" data-es="Países atendidos">Paesi serviti</div>
                 </div>
               </div>
             </div>
             <div class="about-cards">
               <div class="glass about-card anim">
-                <h3 data-en="The mission" data-fr="La mission" data-de="Die Mission">La missione</h3>
-                <p data-en="Spare parts that last longer, keeping machines in the field with as little downtime as possible." data-fr="Des pièces qui durent plus longtemps, pour garder les machines aux champs avec un minimum d'arrêts." data-de="Ersatzteile, die länger halten, damit die Maschinen im Einsatz bleiben und Stillstände minimiert werden.">Ricambi che durano di più, per tenere le macchine in campo e ferme il meno possibile.</p>
+                <h3 data-en="The mission" data-fr="La mission" data-de="Die Mission" data-es="La misión">La missione</h3>
+                <p data-en="Spare parts that last longer, keeping machines in the field with as little downtime as possible." data-fr="Des pièces qui durent plus longtemps, pour garder les machines aux champs avec un minimum d'arrêts." data-de="Ersatzteile, die länger halten, damit die Maschinen im Einsatz bleiben und Stillstände minimiert werden." data-es="Recambios que duran más, para mantener las máquinas en el campo y detenidas el menor tiempo posible.">Ricambi che durano di più, per tenere le macchine in campo e ferme il meno possibile.</p>
               </div>
               <div class="glass about-card anim">
-                <h3 data-en="The method" data-fr="La méthode" data-de="Die Methode">Il metodo</h3>
-                <p data-en="Forging, heat treatment and machining under a single quality system: from raw bar to finished, packaged part." data-fr="Forgeage, traitements thermiques et usinage sous un seul système qualité : de la barre brute à la pièce finie et emballée." data-de="Schmieden, Wärmebehandlung und Bearbeitung unter einem einzigen Qualitätssystem: von der Rohstange bis zum fertigen, verpackten Teil.">Forgiatura, trattamenti termici e lavorazione sotto un unico sistema qualità: dalla barra grezza al pezzo finito e imballato.</p>
+                <h3 data-en="The method" data-fr="La méthode" data-de="Die Methode" data-es="El método">Il metodo</h3>
+                <p data-en="Forging, heat treatment and machining under a single quality system: from raw bar to finished, packaged part." data-fr="Forgeage, traitements thermiques et usinage sous un seul système qualité : de la barre brute à la pièce finie et emballée." data-de="Schmieden, Wärmebehandlung und Bearbeitung unter einem einzigen Qualitätssystem: von der Rohstange bis zum fertigen, verpackten Teil." data-es="Forjado, tratamientos térmicos y mecanizado bajo un único sistema de calidad: de la barra en bruto a la pieza terminada y embalada.">Forgiatura, trattamenti termici e lavorazione sotto un unico sistema qualità: dalla barra grezza al pezzo finito e imballato.</p>
               </div>
               <div class="glass about-card anim">
-                <h3 data-en="The promise" data-fr="La promesse" data-de="Das Versprechen">La promessa</h3>
-                <p data-en="The same standard on every batch, in Italy and across the world. Quality, everywhere." data-fr="Le même standard sur chaque lot, en Italie et dans le monde. Qualité, partout." data-de="Derselbe Standard für jede Charge, in Italien und weltweit. Qualität, überall.">Lo stesso standard su ogni lotto, in Italia e nel mondo. Qualità, ovunque.</p>
+                <h3 data-en="The promise" data-fr="La promesse" data-de="Das Versprechen" data-es="La promesa">La promessa</h3>
+                <p data-en="The same standard on every batch, in Italy and across the world. Quality, everywhere." data-fr="Le même standard sur chaque lot, en Italie et dans le monde. Qualité, partout." data-de="Derselbe Standard für jede Charge, in Italien und weltweit. Qualität, überall." data-es="El mismo estándar en cada lote, en Italia y en el mundo. Calidad, en todas partes.">Lo stesso standard su ogni lotto, in Italia e nel mondo. Qualità, ovunque.</p>
               </div>
             </div>
           </section>
@@ -205,85 +197,85 @@
           <!-- ============ PRODOTTI ============ -->
           <section class="section" id="prodotti" aria-label="Prodotti">
             <div class="view__head anim">
-              <h2 class="view__title" data-en="Forged products for every farming operation." data-fr="Des articles forgés pour chaque travail agricole." data-de="Geschmiedete Artikel für jede Feldarbeit.">Articoli forgiati per ogni lavorazione.</h2>
-              <p class="view__lead view__lead--nowrap" data-en="From mulching to harrowing: wear parts designed to keep your machines running, season after season." data-fr="Du broyage au hersage : des pièces d'usure conçues pour garder vos machines en activité, saison après saison." data-de="Vom Mulchen bis zum Eggen: Verschleißteile, die Ihre Maschinen Saison für Saison im Einsatz halten.">Dalla trinciatura all'erpicatura: componenti d'usura progettati per tenere in campo le tue macchine, stagione dopo stagione.</p>
+              <h2 class="view__title" data-en="Forged products for every farming operation." data-fr="Des articles forgés pour chaque travail agricole." data-de="Geschmiedete Artikel für jede Feldarbeit." data-es="Artículos forjados para cada labor agrícola.">Articoli forgiati per ogni lavorazione.</h2>
+              <p class="view__lead view__lead--nowrap" data-en="From mulching to harrowing: wear parts designed to keep your machines running, season after season." data-fr="Du broyage au hersage : des pièces d'usure conçues pour garder vos machines en activité, saison après saison." data-de="Vom Mulchen bis zum Eggen: Verschleißteile, die Ihre Maschinen Saison für Saison im Einsatz halten." data-es="De la trituración al gradeo: componentes de desgaste diseñados para mantener tus máquinas en el campo, temporada tras temporada.">Dalla trinciatura all'erpicatura: componenti d'usura progettati per tenere in campo le tue macchine, stagione dopo stagione.</p>
             </div>
             <div class="product-grid">
               <article class="glass product anim">
                 <div class="product__media"><img src="assets/img/prod-mazze.png" alt="Mazza forgiata per trinciasermenti" loading="lazy" /></div>
-                <h3 data-en="Mulcher hammers" data-fr="Marteaux de broyeur" data-de="Mulchhämmer">Mazze trinciasermenti</h3>
-                <p data-en="Forged flail hammers for mulchers and shredders. Maximum impact resistance." data-fr="Marteaux à fléaux forgés pour broyeurs et déchiqueteuses. Résistance maximale aux chocs." data-de="Geschmiedete Schlegelhämmer für Mulcher und Häcksler. Maximale Schlagfestigkeit.">Mazze forgiate per trinciasermenti e trinciatrici. Massima resistenza all'impatto.</p>
+                <h3 data-en="Mulcher hammers" data-fr="Marteaux de broyeur" data-de="Mulchhämmer" data-es="Mazas para trituradoras">Mazze trinciasermenti</h3>
+                <p data-en="Forged flail hammers for mulchers and shredders. Maximum impact resistance." data-fr="Marteaux à fléaux forgés pour broyeurs et déchiqueteuses. Résistance maximale aux chocs." data-de="Geschmiedete Schlegelhämmer für Mulcher und Häcksler. Maximale Schlagfestigkeit." data-es="Mazas forjadas para trituradoras y desbrozadoras. Máxima resistencia al impacto.">Mazze forgiate per trinciasermenti e trinciatrici. Massima resistenza all'impatto.</p>
                 <div class="tags">
-                  <span data-en="Alloy steel" data-fr="Acier allié" data-de="Legierter Stahl">Acciaio legato</span>
-                  <span data-en="Hardened" data-fr="Trempées" data-de="Gehärtet">Temprate</span>
+                  <span data-en="Alloy steel" data-fr="Acier allié" data-de="Legierter Stahl" data-es="Acero aleado">Acciaio legato</span>
+                  <span data-en="Hardened" data-fr="Trempées" data-de="Gehärtet" data-es="Templadas">Temprate</span>
                 </div>
                 <a class="product__more" href="#contatti">
-                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern">Richiedi info</span>
+                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern" data-es="Solicitar info">Richiedi info</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
               </article>
               <article class="glass product anim">
                 <div class="product__media"><img src="assets/img/prod-coltelli.png" alt="Coltello forgiato per trincia" loading="lazy" /></div>
-                <h3 data-en="Flail knives" data-fr="Couteaux de broyeur" data-de="Schlegelmesser">Coltelli per trincia</h3>
-                <p data-en="Knives and blades for flail mowers, with a clean cut and long edge life." data-fr="Couteaux et lames pour broyeurs à fléaux, coupe nette et longue durée du tranchant." data-de="Messer und Klingen für Schlegelmäher, sauberer Schnitt und lange Schneidenstandzeit.">Coltelli e lame per trincia, taglio netto e lunga durata del filo.</p>
+                <h3 data-en="Flail knives" data-fr="Couteaux de broyeur" data-de="Schlegelmesser" data-es="Cuchillas para trituradora">Coltelli per trincia</h3>
+                <p data-en="Knives and blades for flail mowers, with a clean cut and long edge life." data-fr="Couteaux et lames pour broyeurs à fléaux, coupe nette et longue durée du tranchant." data-de="Messer und Klingen für Schlegelmäher, sauberer Schnitt und lange Schneidenstandzeit." data-es="Cuchillas y hojas para trituradoras, corte limpio y larga duración del filo.">Coltelli e lame per trincia, taglio netto e lunga durata del filo.</p>
                 <div class="tags">
-                  <span data-en="Forged" data-fr="Forgés" data-de="Geschmiedet">Forgiati</span>
-                  <span data-en="Wear-resistant" data-fr="Anti-usure" data-de="Verschleißfest">Anti-usura</span>
+                  <span data-en="Forged" data-fr="Forgés" data-de="Geschmiedet" data-es="Forjadas">Forgiati</span>
+                  <span data-en="Wear-resistant" data-fr="Anti-usure" data-de="Verschleißfest" data-es="Resistentes al desgaste">Anti-usura</span>
                 </div>
                 <a class="product__more" href="#contatti">
-                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern">Richiedi info</span>
+                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern" data-es="Solicitar info">Richiedi info</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
               </article>
               <article class="glass product anim">
                 <div class="product__media"><img src="assets/img/prod-denti.png" alt="Dente forgiato per erpice" loading="lazy" /></div>
-                <h3 data-en="Harrow tines" data-fr="Dents de herse" data-de="Eggenzinken">Denti per erpice</h3>
-                <p data-en="Forged tines and points for harrows and cultivators. Precise soil penetration." data-fr="Dents et pointes forgées pour herses et cultivateurs. Pénétration précise dans le sol." data-de="Geschmiedete Zinken und Spitzen für Eggen und Grubber. Präzises Eindringen in den Boden.">Denti e punte forgiate per erpici e coltivatori. Penetrazione precisa nel terreno.</p>
+                <h3 data-en="Harrow tines" data-fr="Dents de herse" data-de="Eggenzinken" data-es="Dientes de grada">Denti per erpice</h3>
+                <p data-en="Forged tines and points for harrows and cultivators. Precise soil penetration." data-fr="Dents et pointes forgées pour herses et cultivateurs. Pénétration précise dans le sol." data-de="Geschmiedete Zinken und Spitzen für Eggen und Grubber. Präzises Eindringen in den Boden." data-es="Dientes y puntas forjados para gradas y cultivadores. Penetración precisa en el terreno.">Denti e punte forgiate per erpici e coltivatori. Penetrazione precisa nel terreno.</p>
                 <div class="tags">
-                  <span data-en="Boron steel" data-fr="Acier au bore" data-de="Borstahl">Acciaio al boro</span>
-                  <span data-en="Hardened" data-fr="Trempées" data-de="Gehärtet">Temprate</span>
+                  <span data-en="Boron steel" data-fr="Acier au bore" data-de="Borstahl" data-es="Acero al boro">Acciaio al boro</span>
+                  <span data-en="Hardened" data-fr="Trempées" data-de="Gehärtet" data-es="Templados">Temprate</span>
                 </div>
                 <a class="product__more" href="#contatti">
-                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern">Richiedi info</span>
+                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern" data-es="Solicitar info">Richiedi info</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
               </article>
               <article class="glass product anim">
                 <div class="product__media"><img src="assets/img/prod-zappe.png" alt="Zappa forgiata per fresa" loading="lazy" /></div>
-                <h3 data-en="Tiller blades" data-fr="Lames de fraise" data-de="Fräsmesser">Zappe per frese</h3>
-                <p data-en="Blades and hoes for rotary tillers and power harrows, balanced and durable." data-fr="Lames et houes pour fraises rotatives et herses rotatives, équilibrées et durables." data-de="Klingen und Hacken für Bodenfräsen und Kreiseleggen, ausgewuchtet und langlebig.">Zappe e coltelli per frese e zappatrici, bilanciate e durevoli.</p>
+                <h3 data-en="Tiller blades" data-fr="Lames de fraise" data-de="Fräsmesser" data-es="Cuchillas para fresadora">Zappe per frese</h3>
+                <p data-en="Blades and hoes for rotary tillers and power harrows, balanced and durable." data-fr="Lames et houes pour fraises rotatives et herses rotatives, équilibrées et durables." data-de="Klingen und Hacken für Bodenfräsen und Kreiseleggen, ausgewuchtet und langlebig." data-es="Cuchillas y azadas para fresadoras rotativas, equilibradas y duraderas.">Zappe e coltelli per frese e zappatrici, bilanciate e durevoli.</p>
                 <div class="tags">
-                  <span data-en="Forged" data-fr="Forgées" data-de="Geschmiedet">Forgiate</span>
-                  <span data-en="Balanced" data-fr="Équilibrées" data-de="Ausgewuchtet">Bilanciate</span>
+                  <span data-en="Forged" data-fr="Forgées" data-de="Geschmiedet" data-es="Forjadas">Forgiate</span>
+                  <span data-en="Balanced" data-fr="Équilibrées" data-de="Ausgewuchtet" data-es="Equilibradas">Bilanciate</span>
                 </div>
                 <a class="product__more" href="#contatti">
-                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern">Richiedi info</span>
+                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern" data-es="Solicitar info">Richiedi info</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
               </article>
               <article class="glass product anim">
                 <div class="product__media"><img src="assets/img/prod-vomeri.png" alt="Lama e punta forgiata" loading="lazy" /></div>
-                <h3 data-en="Plough points" data-fr="Socs et pointes" data-de="Pflugschare und Spitzen">Vomeri e punte</h3>
-                <p data-en="Plough points and shares forged for deep, abrasive working conditions." data-fr="Socs, pointes et rasettes forgés pour des conditions de travail profondes et abrasives." data-de="Pflugschare, Spitzen und Vorschäler, geschmiedet für tiefe, abrasive Einsatzbedingungen.">Vomeri, punte e assolcatori forgiati per lavorazioni profonde e abrasive.</p>
+                <h3 data-en="Plough points" data-fr="Socs et pointes" data-de="Pflugschare und Spitzen" data-es="Rejas y puntas de arado">Vomeri e punte</h3>
+                <p data-en="Plough points and shares forged for deep, abrasive working conditions." data-fr="Socs, pointes et rasettes forgés pour des conditions de travail profondes et abrasives." data-de="Pflugschare, Spitzen und Vorschäler, geschmiedet für tiefe, abrasive Einsatzbedingungen." data-es="Rejas, puntas y hurgones forjados para labores profundas y abrasivas.">Vomeri, punte e assolcatori forgiati per lavorazioni profonde e abrasive.</p>
                 <div class="tags">
-                  <span data-en="Alloy steel" data-fr="Acier allié" data-de="Legierter Stahl">Acciaio legato</span>
-                  <span data-en="High wear" data-fr="Haute usure" data-de="Hoher Verschleiß">Alta usura</span>
+                  <span data-en="Alloy steel" data-fr="Acier allié" data-de="Legierter Stahl" data-es="Acero aleado">Acciaio legato</span>
+                  <span data-en="High wear" data-fr="Haute usure" data-de="Hoher Verschleiß" data-es="Alto desgaste">Alta usura</span>
                 </div>
                 <a class="product__more" href="#contatti">
-                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern">Richiedi info</span>
+                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern" data-es="Solicitar info">Richiedi info</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
               </article>
               <article class="glass product anim">
                 <div class="product__media"><img src="assets/img/prod-ricambi.png" alt="Dettaglio di un ricambio forgiato su disegno" loading="lazy" /></div>
-                <h3 data-en="Custom forged parts" data-fr="Pièces sur plan" data-de="Teile nach Zeichnung">Articoli su disegno</h3>
-                <p data-en="Bespoke forged components from your sample or technical drawing." data-fr="Composants forgés sur mesure à partir de votre échantillon ou plan technique." data-de="Maßgeschneiderte Schmiedeteile nach Ihrem Muster oder Ihrer technischen Zeichnung.">Componenti forgiati personalizzati a partire dal tuo campione o disegno tecnico.</p>
+                <h3 data-en="Custom forged parts" data-fr="Pièces sur plan" data-de="Teile nach Zeichnung" data-es="Piezas a medida">Articoli su disegno</h3>
+                <p data-en="Bespoke forged components from your sample or technical drawing." data-fr="Composants forgés sur mesure à partir de votre échantillon ou plan technique." data-de="Maßgeschneiderte Schmiedeteile nach Ihrem Muster oder Ihrer technischen Zeichnung." data-es="Componentes forjados personalizados a partir de tu muestra o plano técnico.">Componenti forgiati personalizzati a partire dal tuo campione o disegno tecnico.</p>
                 <div class="tags">
-                  <span data-en="Made to order" data-fr="Sur mesure" data-de="Maßanfertigung">Su misura</span>
-                  <span data-en="Co-design" data-fr="Co-conception" data-de="Co-Engineering">Co-progettazione</span>
+                  <span data-en="Made to order" data-fr="Sur mesure" data-de="Maßanfertigung" data-es="Bajo pedido">Su misura</span>
+                  <span data-en="Co-design" data-fr="Co-conception" data-de="Co-Engineering" data-es="Codiseño">Co-progettazione</span>
                 </div>
                 <a class="product__more" href="#contatti">
-                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern">Richiedi info</span>
+                  <span data-en="Request info" data-fr="Demander des infos" data-de="Infos anfordern" data-es="Solicitar info">Richiedi info</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
               </article>
@@ -293,27 +285,27 @@
           <!-- ============ BLOG ============ -->
           <section class="section" id="blog" aria-label="Blog">
             <div class="view__head anim">
-              <h2 class="view__title" data-en="Field and steel: the SABA blog." data-fr="Champ et acier : le blog SABA." data-de="Feld und Stahl: der SABA-Blog.">Campo e acciaio: il blog di SABA.</h2>
-              <p class="view__lead view__lead--nowrap" data-en="How tools work the soil and why forging makes spare parts last longer. Four reads, straight from the people who make them." data-fr="Comment les outils travaillent le sol et pourquoi le forgeage fait durer les pièces. Quatre articles, par ceux qui les fabriquent." data-de="Wie Werkzeuge den Boden bearbeiten und warum Schmieden Ersatzteile länger halten lässt. Vier Beiträge, von denen, die sie herstellen.">Come lavorano gli attrezzi nel terreno e perché la forgiatura fa durare i ricambi. Quattro letture, da chi li produce.</p>
+              <h2 class="view__title" data-en="Field and steel: the SABA blog." data-fr="Champ et acier : le blog SABA." data-de="Feld und Stahl: der SABA-Blog." data-es="Campo y acero: el blog de SABA.">Campo e acciaio: il blog di SABA.</h2>
+              <p class="view__lead view__lead--nowrap" data-en="How tools work the soil and why forging makes spare parts last longer. Four reads, straight from the people who make them." data-fr="Comment les outils travaillent le sol et pourquoi le forgeage fait durer les pièces. Quatre articles, par ceux qui les fabriquent." data-de="Wie Werkzeuge den Boden bearbeiten und warum Schmieden Ersatzteile länger halten lässt. Vier Beiträge, von denen, die sie herstellen." data-es="Cómo trabajan los aperos en el terreno y por qué el forjado hace durar más los recambios. Cuatro lecturas, de quienes los fabrican.">Come lavorano gli attrezzi nel terreno e perché la forgiatura fa durare i ricambi. Quattro letture, da chi li produce.</p>
             </div>
             <div class="blog-carousel">
             <div class="product-grid blog-track" data-blog-track>
               <article class="glass product blog-card anim">
                 <div class="product__media"><img src="assets/img/field-plough.jpg" alt="Campo appena arato" loading="lazy" /></div>
-                <span class="blog-card__cat" data-en="Ploughing" data-fr="Labour" data-de="Pflügen">Aratura</span>
-                <h3 data-en="Ploughing: choosing points and shares that last" data-fr="Labour : choisir des socs et pointes qui durent" data-de="Pflügen: Schare und Spitzen wählen, die halten">Aratura: scegliere vomeri e punte che durano</h3>
-                <p data-en="Soil moisture, hard facing and boron steel: what really extends the life of a share." data-fr="Humidité du sol, rechargements durs et acier au bore : ce qui allonge vraiment la vie du soc." data-de="Bodenfeuchte, Panzerung und Borstahl: was die Lebensdauer der Schar wirklich verlängert.">Umidità del terreno, riporti duri e acciaio al boro: cosa allunga davvero la vita del vomere.</p>
+                <span class="blog-card__cat" data-en="Ploughing" data-fr="Labour" data-de="Pflügen" data-es="Arado">Aratura</span>
+                <h3 data-en="Ploughing: choosing points and shares that last" data-fr="Labour : choisir des socs et pointes qui durent" data-de="Pflügen: Schare und Spitzen wählen, die halten" data-es="Arado: elegir rejas y puntas que duren">Aratura: scegliere vomeri e punte che durano</h3>
+                <p data-en="Soil moisture, hard facing and boron steel: what really extends the life of a share." data-fr="Humidité du sol, rechargements durs et acier au bore : ce qui allonge vraiment la vie du soc." data-de="Bodenfeuchte, Panzerung und Borstahl: was die Lebensdauer der Schar wirklich verlängert." data-es="Humedad del terreno, recargues duros y acero al boro: qué alarga realmente la vida de la reja.">Umidità del terreno, riporti duri e acciaio al boro: cosa allunga davvero la vita del vomere.</p>
                 <details class="article">
                   <summary class="article__toggle">
-                    <span data-en="Read the article" data-fr="Lire l'article" data-de="Artikel lesen">Leggi l'articolo</span>
+                    <span data-en="Read the article" data-fr="Lire l'article" data-de="Artikel lesen" data-es="Leer el artículo">Leggi l'articolo</span>
                     <svg class="article__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </summary>
                   <div class="article__body">
-                    <p data-en="Ploughing is the job that tests a wear part the most. The share and the point cut and turn the furrow slice for hours, always in contact with soil that behaves like sandpaper. On abrasive ground the point wears back and thins out, and once the geometry changes the plough struggles to hold depth and pull straight." data-fr="Le labour est le travail qui met le plus à l'épreuve une pièce d'usure. Le soc et la pointe coupent et retournent la bande de terre pendant des heures, toujours au contact d'un sol qui se comporte comme du papier de verre. Sur les terrains abrasifs, la pointe recule et s'amincit, et quand la géométrie change, la charrue peine à tenir la profondeur et à tirer droit." data-de="Das Pflügen ist die Arbeit, die ein Verschleißteil am stärksten fordert. Schar und Spitze schneiden und wenden den Erdbalken stundenlang, stets im Kontakt mit einem Boden, der sich wie Schmirgelpapier verhält. Auf abrasiven Böden zieht sich die Spitze zurück und wird dünner, und sobald sich die Geometrie ändert, hält der Pflug Tiefe und Spur nur noch mühsam.">L'aratura è il lavoro che mette più alla prova un ricambio. Il vomere e la punta tagliano e rovesciano la fetta di terra per ore, sempre a contatto con un suolo che si comporta come carta vetrata. Sui terreni abrasivi la punta arretra e si assottiglia, e quando la geometria cambia l'aratro fatica a tenere la profondità e a tirare dritto.</p>
-                    <p data-en="One useful finding from research: on share wear, soil moisture matters more than soil type. The same field, when drier, wears the part faster. It is worth keeping in mind when you decide when to plough and how many spares to keep on the shelf." data-fr="Un résultat utile de la recherche : pour l'usure du soc, l'humidité du sol pèse plus que le type de sol. Le même champ, plus sec, use davantage. Cela vaut la peine d'en tenir compte pour décider quand labourer et combien de pièces garder en stock." data-de="Ein nützliches Ergebnis aus der Forschung: Für den Scharverschleiß wiegt die Bodenfeuchte schwerer als die Bodenart. Dasselbe Feld verschleißt das Teil trockener stärker. Das lohnt sich zu bedenken, wenn man entscheidet, wann gepflügt wird und wie viele Ersatzteile man auf Lager hält.">Un dato utile dalla ricerca: sull'usura del vomere l'umidità del terreno pesa più del tipo di suolo. Lo stesso campo, più asciutto, consuma di più. Vale la pena tenerne conto nel decidere quando arare e quanto ricambio tenere a magazzino.</p>
-                    <p data-en="On materials, boron-steel points combine hardness and toughness and hold up well under steady load. Where abrasion is extreme, hard facing is applied along the working edges: hardfaced shares lose less weight and less height, ask for less fuel and cover more hectares before a change. A forged point that keeps its shape longer holds the plough's depth and setup steady, and you feel that both in the result and at the fuel tank." data-fr="Côté matériau, les pointes en acier au bore allient dureté et ténacité et supportent bien l'effort continu. Là où l'abrasion est extrême, on applique des rechargements durs sur les bords de travail : les socs rechargés perdent moins de poids et de hauteur, demandent moins de gazole et font plus d'hectares avant le remplacement. Une pointe forgée qui garde sa forme plus longtemps maintient constantes la profondeur et l'assiette de la charrue, et cela se sent sur le résultat comme sur le réservoir." data-de="Beim Werkstoff verbinden Spitzen aus Borstahl Härte und Zähigkeit und halten der Dauerbelastung gut stand. Wo der Verschleiß extrem ist, werden die Arbeitskanten hartaufgepanzert: gepanzerte Schare verlieren weniger Gewicht und Höhe, verlangen weniger Diesel und schaffen mehr Hektar bis zum Wechsel. Eine geschmiedete Spitze, die ihre Form länger behält, hält Tiefe und Einstellung des Pflugs konstant, und das merkt man am Ergebnis wie am Tank.">Sul materiale, le punte in acciaio al boro uniscono durezza e tenacità e reggono bene lo sforzo continuo. Dove l'abrasione è estrema si usano riporti duri sui bordi di lavoro: i vomeri con riporto perdono meno peso e meno quota, chiedono meno gasolio e fanno più ettari prima del cambio. Una punta forgiata che tiene la forma più a lungo mantiene costanti profondità e assetto dell'aratro, e questo si sente sul risultato e sul serbatoio.</p>
+                    <p data-en="Ploughing is the job that tests a wear part the most. The share and the point cut and turn the furrow slice for hours, always in contact with soil that behaves like sandpaper. On abrasive ground the point wears back and thins out, and once the geometry changes the plough struggles to hold depth and pull straight." data-fr="Le labour est le travail qui met le plus à l'épreuve une pièce d'usure. Le soc et la pointe coupent et retournent la bande de terre pendant des heures, toujours au contact d'un sol qui se comporte comme du papier de verre. Sur les terrains abrasifs, la pointe recule et s'amincit, et quand la géométrie change, la charrue peine à tenir la profondeur et à tirer droit." data-de="Das Pflügen ist die Arbeit, die ein Verschleißteil am stärksten fordert. Schar und Spitze schneiden und wenden den Erdbalken stundenlang, stets im Kontakt mit einem Boden, der sich wie Schmirgelpapier verhält. Auf abrasiven Böden zieht sich die Spitze zurück und wird dünner, und sobald sich die Geometrie ändert, hält der Pflug Tiefe und Spur nur noch mühsam." data-es="El arado es la labor que más pone a prueba un recambio. La reja y la punta cortan y voltean la franja de tierra durante horas, siempre en contacto con un suelo que se comporta como papel de lija. En los terrenos abrasivos la punta retrocede y se adelgaza, y cuando la geometría cambia el arado tiene dificultades para mantener la profundidad y tirar recto.">L'aratura è il lavoro che mette più alla prova un ricambio. Il vomere e la punta tagliano e rovesciano la fetta di terra per ore, sempre a contatto con un suolo che si comporta come carta vetrata. Sui terreni abrasivi la punta arretra e si assottiglia, e quando la geometria cambia l'aratro fatica a tenere la profondità e a tirare dritto.</p>
+                    <p data-en="One useful finding from research: on share wear, soil moisture matters more than soil type. The same field, when drier, wears the part faster. It is worth keeping in mind when you decide when to plough and how many spares to keep on the shelf." data-fr="Un résultat utile de la recherche : pour l'usure du soc, l'humidité du sol pèse plus que le type de sol. Le même champ, plus sec, use davantage. Cela vaut la peine d'en tenir compte pour décider quand labourer et combien de pièces garder en stock." data-de="Ein nützliches Ergebnis aus der Forschung: Für den Scharverschleiß wiegt die Bodenfeuchte schwerer als die Bodenart. Dasselbe Feld verschleißt das Teil trockener stärker. Das lohnt sich zu bedenken, wenn man entscheidet, wann gepflügt wird und wie viele Ersatzteile man auf Lager hält." data-es="Un dato útil de la investigación: en el desgaste de la reja, la humedad del terreno pesa más que el tipo de suelo. El mismo campo, más seco, desgasta más la pieza. Vale la pena tenerlo en cuenta a la hora de decidir cuándo arar y cuánto recambio mantener en almacén.">Un dato utile dalla ricerca: sull'usura del vomere l'umidità del terreno pesa più del tipo di suolo. Lo stesso campo, più asciutto, consuma di più. Vale la pena tenerne conto nel decidere quando arare e quanto ricambio tenere a magazzino.</p>
+                    <p data-en="On materials, boron-steel points combine hardness and toughness and hold up well under steady load. Where abrasion is extreme, hard facing is applied along the working edges: hardfaced shares lose less weight and less height, ask for less fuel and cover more hectares before a change. A forged point that keeps its shape longer holds the plough's depth and setup steady, and you feel that both in the result and at the fuel tank." data-fr="Côté matériau, les pointes en acier au bore allient dureté et ténacité et supportent bien l'effort continu. Là où l'abrasion est extrême, on applique des rechargements durs sur les bords de travail : les socs rechargés perdent moins de poids et de hauteur, demandent moins de gazole et font plus d'hectares avant le remplacement. Une pointe forgée qui garde sa forme plus longtemps maintient constantes la profondeur et l'assiette de la charrue, et cela se sent sur le résultat comme sur le réservoir." data-de="Beim Werkstoff verbinden Spitzen aus Borstahl Härte und Zähigkeit und halten der Dauerbelastung gut stand. Wo der Verschleiß extrem ist, werden die Arbeitskanten hartaufgepanzert: gepanzerte Schare verlieren weniger Gewicht und Höhe, verlangen weniger Diesel und schaffen mehr Hektar bis zum Wechsel. Eine geschmiedete Spitze, die ihre Form länger behält, hält Tiefe und Einstellung des Pflugs konstant, und das merkt man am Ergebnis wie am Tank." data-es="En cuanto al material, las puntas de acero al boro combinan dureza y tenacidad y resisten bien el esfuerzo continuo. Donde la abrasión es extrema se aplican recargues duros en los bordes de trabajo: las rejas con recargue pierden menos peso y menos altura, piden menos gasóleo y cubren más hectáreas antes del cambio. Una punta forjada que mantiene la forma más tiempo conserva constantes la profundidad y el ajuste del arado, y eso se nota tanto en el resultado como en el depósito.">Sul materiale, le punte in acciaio al boro uniscono durezza e tenacità e reggono bene lo sforzo continuo. Dove l'abrasione è estrema si usano riporti duri sui bordi di lavoro: i vomeri con riporto perdono meno peso e meno quota, chiedono meno gasolio e fanno più ettari prima del cambio. Una punta forgiata che tiene la forma più a lungo mantiene costanti profondità e assetto dell'aratro, e questo si sente sul risultato e sul serbatoio.</p>
                     <a class="article__cta" href="#contatti">
-                      <span data-en="Request information" data-fr="Demander des informations" data-de="Informationen anfordern">Richiedi informazioni</span>
+                      <span data-en="Request information" data-fr="Demander des informations" data-de="Informationen anfordern" data-es="Solicitar información">Richiedi informazioni</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
                   </div>
@@ -321,20 +313,20 @@
               </article>
               <article class="glass product blog-card anim">
                 <div class="product__media"><img src="assets/img/field-harvest-sunset.jpg" alt="Trinciatura in campo al tramonto" loading="lazy" /></div>
-                <span class="blog-card__cat" data-en="Mulching" data-fr="Broyage" data-de="Mulchen">Trinciatura</span>
-                <h3 data-en="Mulcher hammers: forged or cast?" data-fr="Marteaux de broyeur : forgés ou moulés ?" data-de="Mulchhämmer: geschmiedet oder gegossen?">Mazze trinciasermenti: forgiate o fuse?</h3>
-                <p data-en="In mulching the gap between forged and cast shows up in the field. Here is why." data-fr="Au broyage, la différence entre forgé et moulé se voit au champ. Voici pourquoi." data-de="Beim Mulchen zeigt sich der Unterschied zwischen geschmiedet und gegossen auf dem Feld. Darum geht es.">Nella trinciatura la differenza tra forgiato e fuso si vede in campo. Ecco perché.</p>
+                <span class="blog-card__cat" data-en="Mulching" data-fr="Broyage" data-de="Mulchen" data-es="Trituración">Trinciatura</span>
+                <h3 data-en="Mulcher hammers: forged or cast?" data-fr="Marteaux de broyeur : forgés ou moulés ?" data-de="Mulchhämmer: geschmiedet oder gegossen?" data-es="Mazas para trituradoras: ¿forjadas o fundidas?">Mazze trinciasermenti: forgiate o fuse?</h3>
+                <p data-en="In mulching the gap between forged and cast shows up in the field. Here is why." data-fr="Au broyage, la différence entre forgé et moulé se voit au champ. Voici pourquoi." data-de="Beim Mulchen zeigt sich der Unterschied zwischen geschmiedet und gegossen auf dem Feld. Darum geht es." data-es="En la trituración, la diferencia entre forjado y fundido se nota en el campo. Aquí está el porqué.">Nella trinciatura la differenza tra forgiato e fuso si vede in campo. Ecco perché.</p>
                 <details class="article">
                   <summary class="article__toggle">
-                    <span data-en="Read the article" data-fr="Lire l'article" data-de="Artikel lesen">Leggi l'articolo</span>
+                    <span data-en="Read the article" data-fr="Lire l'article" data-de="Artikel lesen" data-es="Leer el artículo">Leggi l'articolo</span>
                     <svg class="article__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </summary>
                   <div class="article__body">
-                    <p data-en="The hammer on a mulcher works hard. It hits prunings, branches and the odd stone at several thousand revs a minute, and every contact is a small impact. In this kind of work the gap between a forged hammer and a cast one shows up in the field, not on the data sheet." data-fr="Le marteau d'un broyeur travaille dur. Il frappe sarments, branches et parfois des pierres à plusieurs milliers de tours par minute, et chaque contact est un petit choc. Dans ces conditions, la différence entre un marteau forgé et un marteau moulé se voit au champ, pas sur la fiche technique." data-de="Der Hammer eines Mulchers arbeitet hart. Er trifft Rebholz, Äste und gelegentlich Steine mit mehreren tausend Umdrehungen pro Minute, und jeder Kontakt ist ein kleiner Schlag. Unter diesen Bedingungen zeigt sich der Unterschied zwischen einem geschmiedeten und einem gegossenen Hammer auf dem Feld, nicht im Datenblatt.">La mazza di un trinciasermenti lavora dura: colpisce sarmenti, rami e a volte sassi a diverse migliaia di giri al minuto, e ogni contatto è un piccolo urto. In queste condizioni la differenza tra una mazza forgiata e una fusa si vede in campo, non sulla scheda tecnica.</p>
-                    <p data-en="In hot forging the steel is shaped while glowing, and its grain follows the form of the part instead of being cut through. The result is a structure with no internal voids that absorbs impacts without starting cracks. A cast hammer of the same shape begins with more defects and tends to give way sooner when it meets an obstacle." data-fr="Au forgeage à chaud, l'acier est déformé alors qu'il est incandescent, et ses fibres suivent la forme de la pièce au lieu d'être coupées. On obtient une structure sans vides internes, qui absorbe les chocs sans amorcer de fissures. Un marteau moulé de même forme part avec plus de défauts et cède plus tôt lorsqu'il rencontre un obstacle." data-de="Beim Warmschmieden wird der Stahl in glühendem Zustand geformt, und sein Faserverlauf folgt der Form des Teils, statt durchtrennt zu werden. So entsteht ein Gefüge ohne innere Lunker, das Schläge aufnimmt, ohne dass Risse entstehen. Ein gegossener Hammer gleicher Form startet mit mehr Fehlstellen und gibt früher nach, wenn er auf ein Hindernis trifft.">Nella forgiatura a caldo l'acciaio viene deformato mentre è incandescente, e le sue fibre seguono la forma del pezzo invece di essere tagliate. Ne esce una struttura senza vuoti interni, che assorbe gli urti senza innescare cricche. Una mazza fusa, a parità di forma, parte con più difetti e tende a cedere prima quando incontra un ostacolo.</p>
-                    <p data-en="At the cutting edge, hardness is what counts. After forging the hammer is hardened, so the surface resists abrasion while the core stays tough and does not snap. That balance is what keeps the mulcher working longer between replacements and cuts down on mid-season stops." data-fr="Sur le tranchant, c'est la dureté qui compte. Après le forgeage, le marteau est trempé : la surface résiste à l'abrasion tandis que le cœur reste tenace et ne casse pas. C'est cet équilibre qui garde le broyeur au travail plus longtemps entre deux remplacements et réduit les arrêts en pleine saison." data-de="An der Schneide zählt die Härte. Nach dem Schmieden wird der Hammer gehärtet, sodass die Oberfläche dem Verschleiß standhält, während der Kern zäh bleibt und nicht bricht. Dieses Gleichgewicht hält den Mulcher länger im Einsatz zwischen zwei Wechseln und verringert Stillstände mitten in der Saison.">Sul tagliente conta la durezza. Dopo la forgiatura la mazza viene temprata, così la superficie resiste all'abrasione mentre il cuore resta tenace e non si spezza. È questo equilibrio a tenere la trincia in campo più a lungo tra un cambio e l'altro, e a ridurre le fermate a metà stagione.</p>
+                    <p data-en="The hammer on a mulcher works hard. It hits prunings, branches and the odd stone at several thousand revs a minute, and every contact is a small impact. In this kind of work the gap between a forged hammer and a cast one shows up in the field, not on the data sheet." data-fr="Le marteau d'un broyeur travaille dur. Il frappe sarments, branches et parfois des pierres à plusieurs milliers de tours par minute, et chaque contact est un petit choc. Dans ces conditions, la différence entre un marteau forgé et un marteau moulé se voit au champ, pas sur la fiche technique." data-de="Der Hammer eines Mulchers arbeitet hart. Er trifft Rebholz, Äste und gelegentlich Steine mit mehreren tausend Umdrehungen pro Minute, und jeder Kontakt ist ein kleiner Schlag. Unter diesen Bedingungen zeigt sich der Unterschied zwischen einem geschmiedeten und einem gegossenen Hammer auf dem Feld, nicht im Datenblatt." data-es="La maza de una trituradora trabaja duro: golpea sarmientos, ramas y a veces piedras a varios miles de revoluciones por minuto, y cada contacto es un pequeño impacto. En estas condiciones, la diferencia entre una maza forjada y una fundida se nota en el campo, no en la ficha técnica.">La mazza di un trinciasermenti lavora dura: colpisce sarmenti, rami e a volte sassi a diverse migliaia di giri al minuto, e ogni contatto è un piccolo urto. In queste condizioni la differenza tra una mazza forgiata e una fusa si vede in campo, non sulla scheda tecnica.</p>
+                    <p data-en="In hot forging the steel is shaped while glowing, and its grain follows the form of the part instead of being cut through. The result is a structure with no internal voids that absorbs impacts without starting cracks. A cast hammer of the same shape begins with more defects and tends to give way sooner when it meets an obstacle." data-fr="Au forgeage à chaud, l'acier est déformé alors qu'il est incandescent, et ses fibres suivent la forme de la pièce au lieu d'être coupées. On obtient une structure sans vides internes, qui absorbe les chocs sans amorcer de fissures. Un marteau moulé de même forme part avec plus de défauts et cède plus tôt lorsqu'il rencontre un obstacle." data-de="Beim Warmschmieden wird der Stahl in glühendem Zustand geformt, und sein Faserverlauf folgt der Form des Teils, statt durchtrennt zu werden. So entsteht ein Gefüge ohne innere Lunker, das Schläge aufnimmt, ohne dass Risse entstehen. Ein gegossener Hammer gleicher Form startet mit mehr Fehlstellen und gibt früher nach, wenn er auf ein Hindernis trifft." data-es="En el forjado en caliente el acero se deforma mientras está incandescente, y sus fibras siguen la forma de la pieza en lugar de ser cortadas. El resultado es una estructura sin huecos internos, que absorbe los impactos sin generar grietas. Una maza fundida, con la misma forma, parte con más defectos y tiende a ceder antes al encontrar un obstáculo.">Nella forgiatura a caldo l'acciaio viene deformato mentre è incandescente, e le sue fibre seguono la forma del pezzo invece di essere tagliate. Ne esce una struttura senza vuoti interni, che assorbe gli urti senza innescare cricche. Una mazza fusa, a parità di forma, parte con più difetti e tende a cedere prima quando incontra un ostacolo.</p>
+                    <p data-en="At the cutting edge, hardness is what counts. After forging the hammer is hardened, so the surface resists abrasion while the core stays tough and does not snap. That balance is what keeps the mulcher working longer between replacements and cuts down on mid-season stops." data-fr="Sur le tranchant, c'est la dureté qui compte. Après le forgeage, le marteau est trempé : la surface résiste à l'abrasion tandis que le cœur reste tenace et ne casse pas. C'est cet équilibre qui garde le broyeur au travail plus longtemps entre deux remplacements et réduit les arrêts en pleine saison." data-de="An der Schneide zählt die Härte. Nach dem Schmieden wird der Hammer gehärtet, sodass die Oberfläche dem Verschleiß standhält, während der Kern zäh bleibt und nicht bricht. Dieses Gleichgewicht hält den Mulcher länger im Einsatz zwischen zwei Wechseln und verringert Stillstände mitten in der Saison." data-es="En el filo cuenta la dureza. Tras el forjado, la maza se templa, de modo que la superficie resiste la abrasión mientras el núcleo se mantiene tenaz y no se rompe. Es este equilibrio el que mantiene la trituradora trabajando más tiempo entre un cambio y otro, y reduce las paradas a mitad de temporada.">Sul tagliente conta la durezza. Dopo la forgiatura la mazza viene temprata, così la superficie resiste all'abrasione mentre il cuore resta tenace e non si spezza. È questo equilibrio a tenere la trincia in campo più a lungo tra un cambio e l'altro, e a ridurre le fermate a metà stagione.</p>
                     <a class="article__cta" href="#contatti">
-                      <span data-en="Request information" data-fr="Demander des informations" data-de="Informationen anfordern">Richiedi informazioni</span>
+                      <span data-en="Request information" data-fr="Demander des informations" data-de="Informationen anfordern" data-es="Solicitar información">Richiedi informazioni</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
                   </div>
@@ -342,20 +334,20 @@
               </article>
               <article class="glass product blog-card anim">
                 <div class="product__media"><img src="assets/img/field-harrow.jpg" alt="Erpicatura del terreno" loading="lazy" /></div>
-                <span class="blog-card__cat" data-en="Seedbed" data-fr="Préparation du sol" data-de="Saatbett">Preparazione del terreno</span>
-                <h3 data-en="Seedbed: the work of the harrow tines" data-fr="Lit de semence : le travail des dents de herse" data-de="Saatbett: die Arbeit der Eggenzinken">Letto di semina: il lavoro dei denti d'erpice</h3>
-                <p data-en="Geometry, boron steel and hard facing: how to keep the seedbed even all season." data-fr="Géométrie, acier au bore et rechargements : comment garder un lit de semence régulier toute la saison." data-de="Geometrie, Borstahl und Panzerung: wie das Saatbett die ganze Saison eben bleibt.">Geometria, acciaio al boro e riporti: come tenere il letto di semina uniforme tutta la stagione.</p>
+                <span class="blog-card__cat" data-en="Seedbed" data-fr="Préparation du sol" data-de="Saatbett" data-es="Preparación del terreno">Preparazione del terreno</span>
+                <h3 data-en="Seedbed: the work of the harrow tines" data-fr="Lit de semence : le travail des dents de herse" data-de="Saatbett: die Arbeit der Eggenzinken" data-es="Cama de siembra: el trabajo de los dientes de grada">Letto di semina: il lavoro dei denti d'erpice</h3>
+                <p data-en="Geometry, boron steel and hard facing: how to keep the seedbed even all season." data-fr="Géométrie, acier au bore et rechargements : comment garder un lit de semence régulier toute la saison." data-de="Geometrie, Borstahl und Panzerung: wie das Saatbett die ganze Saison eben bleibt." data-es="Geometría, acero al boro y recargues: cómo mantener uniforme la cama de siembra toda la temporada.">Geometria, acciaio al boro e riporti: come tenere il letto di semina uniforme tutta la stagione.</p>
                 <details class="article">
                   <summary class="article__toggle">
-                    <span data-en="Read the article" data-fr="Lire l'article" data-de="Artikel lesen">Leggi l'articolo</span>
+                    <span data-en="Read the article" data-fr="Lire l'article" data-de="Artikel lesen" data-es="Leer el artículo">Leggi l'articolo</span>
                     <svg class="article__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </summary>
                   <div class="article__body">
-                    <p data-en="The seedbed is prepared with the harrow, and the quality of the job depends a lot on the tines. A tine breaks down clods, clears small weeds and opens the soil so water and seed have room. If it penetrates poorly or wears fast, the result is uneven and the pass has to be done again." data-fr="Le lit de semence se prépare avec la herse, et la qualité du travail dépend beaucoup des dents. Une dent affine les mottes, élimine les petites adventices et ouvre le sol pour que l'eau et la semence trouvent leur place. Si elle pénètre mal ou s'use vite, le résultat est irrégulier et le passage doit être refait." data-de="Das Saatbett wird mit der Egge bereitet, und die Qualität der Arbeit hängt stark von den Zinken ab. Ein Zinken zerkleinert die Schollen, entfernt kleines Unkraut und öffnet den Boden, damit Wasser und Saatgut Platz finden. Dringt er schlecht ein oder verschleißt er schnell, wird das Ergebnis ungleichmäßig und der Arbeitsgang muss wiederholt werden.">Il letto di semina si prepara con l'erpice, e la qualità del lavoro dipende molto dai denti. Un dente affina le zolle, toglie le erbe piccole e apre il terreno perché acqua e seme trovino posto. Se penetra male o si consuma in fretta, il risultato è irregolare e il passaggio va rifatto.</p>
-                    <p data-en="Geometry comes first. A tine with the right angle of attack enters the soil with less effort, which helps most on unploughed or firm ground. But the shape only holds if the material resists abrasion: soil, sandy soil above all, files the steel down metre by metre." data-fr="La géométrie compte avant tout. Une dent au bon angle d'attaque entre dans le sol avec moins d'effort, utile surtout sur les terres non labourées ou tassées. Mais la forme ne tient que si le matériau résiste à l'abrasion : la terre, surtout sableuse, lime l'acier à chaque mètre." data-de="Die Geometrie kommt zuerst. Ein Zinken mit dem richtigen Anstellwinkel dringt mit weniger Kraftaufwand in den Boden ein, was vor allem auf ungepflügtem oder festem Boden hilft. Doch die Form hält nur, wenn das Material dem Verschleiß standhält: der Boden, sandiger zumal, feilt den Stahl mit jedem Meter ab.">La geometria conta prima di tutto. Un dente con il giusto angolo di attacco entra nel terreno con meno sforzo, utile soprattutto sui suoli non arati o sodi. Ma la forma tiene solo se il materiale resiste all'abrasione: la terra, soprattutto quella sabbiosa, lima l'acciaio a ogni metro.</p>
-                    <p data-en="This is where boron steel makes the difference. Boron raises hardenability, so after heat treatment the tine reaches a high hardness without turning brittle: it stays tough, resists wear, and the risk of breaking in the field drops. On the most abrasive soils, tungsten-carbide plates or hard facing are added along the working edges, which can extend tine life several times over. A tine that lasts longer holds a steady depth and keeps the seedbed even all season." data-fr="C'est là que l'acier au bore fait la différence. Le bore augmente la trempabilité : après traitement thermique, la dent atteint une dureté élevée sans devenir fragile, elle reste tenace, résiste à l'usure et le risque de casse au champ diminue. Sur les sols les plus abrasifs, on ajoute des plaquettes ou des rechargements en métal dur sur les bords de travail, ce qui peut multiplier la durée de vie de la dent. Une dent qui dure plus longtemps maintient une profondeur constante et un lit de semence régulier toute la saison." data-de="Hier macht Borstahl den Unterschied. Bor erhöht die Härtbarkeit, sodass der Zinken nach der Wärmebehandlung eine hohe Härte erreicht, ohne spröde zu werden: Er bleibt zäh, widersteht dem Verschleiß, und das Bruchrisiko auf dem Feld sinkt. Auf den abrasivsten Böden kommen Hartmetallplättchen oder Panzerungen an den Arbeitskanten hinzu, die die Standzeit des Zinkens um ein Mehrfaches verlängern können. Ein Zinken, der länger hält, bewahrt eine gleichmäßige Tiefe und ein ebenes Saatbett über die ganze Saison.">Qui l'acciaio al boro fa la differenza. Il boro aumenta la temprabilità, così dopo il trattamento termico il dente raggiunge una durezza alta senza diventare fragile: resta tenace e resiste all'usura, e il rischio di rottura in campo si abbassa. Sui terreni più abrasivi si aggiungono placchette o riporti in metallo duro sui bordi di lavoro, che allungano la vita del dente anche di diverse volte. Un dente che dura di più tiene la profondità costante e il letto di semina uniforme per tutta la stagione.</p>
+                    <p data-en="The seedbed is prepared with the harrow, and the quality of the job depends a lot on the tines. A tine breaks down clods, clears small weeds and opens the soil so water and seed have room. If it penetrates poorly or wears fast, the result is uneven and the pass has to be done again." data-fr="Le lit de semence se prépare avec la herse, et la qualité du travail dépend beaucoup des dents. Une dent affine les mottes, élimine les petites adventices et ouvre le sol pour que l'eau et la semence trouvent leur place. Si elle pénètre mal ou s'use vite, le résultat est irrégulier et le passage doit être refait." data-de="Das Saatbett wird mit der Egge bereitet, und die Qualität der Arbeit hängt stark von den Zinken ab. Ein Zinken zerkleinert die Schollen, entfernt kleines Unkraut und öffnet den Boden, damit Wasser und Saatgut Platz finden. Dringt er schlecht ein oder verschleißt er schnell, wird das Ergebnis ungleichmäßig und der Arbeitsgang muss wiederholt werden." data-es="La cama de siembra se prepara con la grada, y la calidad del trabajo depende mucho de los dientes. Un diente afina los terrones, elimina las malas hierbas pequeñas y abre el terreno para que el agua y la semilla encuentren su lugar. Si penetra mal o se desgasta rápido, el resultado es irregular y hay que repetir la pasada.">Il letto di semina si prepara con l'erpice, e la qualità del lavoro dipende molto dai denti. Un dente affina le zolle, toglie le erbe piccole e apre il terreno perché acqua e seme trovino posto. Se penetra male o si consuma in fretta, il risultato è irregolare e il passaggio va rifatto.</p>
+                    <p data-en="Geometry comes first. A tine with the right angle of attack enters the soil with less effort, which helps most on unploughed or firm ground. But the shape only holds if the material resists abrasion: soil, sandy soil above all, files the steel down metre by metre." data-fr="La géométrie compte avant tout. Une dent au bon angle d'attaque entre dans le sol avec moins d'effort, utile surtout sur les terres non labourées ou tassées. Mais la forme ne tient que si le matériau résiste à l'abrasion : la terre, surtout sableuse, lime l'acier à chaque mètre." data-de="Die Geometrie kommt zuerst. Ein Zinken mit dem richtigen Anstellwinkel dringt mit weniger Kraftaufwand in den Boden ein, was vor allem auf ungepflügtem oder festem Boden hilft. Doch die Form hält nur, wenn das Material dem Verschleiß standhält: der Boden, sandiger zumal, feilt den Stahl mit jedem Meter ab." data-es="La geometría cuenta ante todo. Un diente con el ángulo de ataque correcto entra en el terreno con menos esfuerzo, útil sobre todo en suelos sin arar o compactos. Pero la forma solo se mantiene si el material resiste la abrasión: la tierra, sobre todo la arenosa, lima el acero a cada metro.">La geometria conta prima di tutto. Un dente con il giusto angolo di attacco entra nel terreno con meno sforzo, utile soprattutto sui suoli non arati o sodi. Ma la forma tiene solo se il materiale resiste all'abrasione: la terra, soprattutto quella sabbiosa, lima l'acciaio a ogni metro.</p>
+                    <p data-en="This is where boron steel makes the difference. Boron raises hardenability, so after heat treatment the tine reaches a high hardness without turning brittle: it stays tough, resists wear, and the risk of breaking in the field drops. On the most abrasive soils, tungsten-carbide plates or hard facing are added along the working edges, which can extend tine life several times over. A tine that lasts longer holds a steady depth and keeps the seedbed even all season." data-fr="C'est là que l'acier au bore fait la différence. Le bore augmente la trempabilité : après traitement thermique, la dent atteint une dureté élevée sans devenir fragile, elle reste tenace, résiste à l'usure et le risque de casse au champ diminue. Sur les sols les plus abrasifs, on ajoute des plaquettes ou des rechargements en métal dur sur les bords de travail, ce qui peut multiplier la durée de vie de la dent. Une dent qui dure plus longtemps maintient une profondeur constante et un lit de semence régulier toute la saison." data-de="Hier macht Borstahl den Unterschied. Bor erhöht die Härtbarkeit, sodass der Zinken nach der Wärmebehandlung eine hohe Härte erreicht, ohne spröde zu werden: Er bleibt zäh, widersteht dem Verschleiß, und das Bruchrisiko auf dem Feld sinkt. Auf den abrasivsten Böden kommen Hartmetallplättchen oder Panzerungen an den Arbeitskanten hinzu, die die Standzeit des Zinkens um ein Mehrfaches verlängern können. Ein Zinken, der länger hält, bewahrt eine gleichmäßige Tiefe und ein ebenes Saatbett über die ganze Saison." data-es="Aquí el acero al boro marca la diferencia. El boro aumenta la templabilidad, de modo que tras el tratamiento térmico el diente alcanza una dureza alta sin volverse frágil: se mantiene tenaz, resiste el desgaste y el riesgo de rotura en el campo disminuye. En los terrenos más abrasivos se añaden plaquitas o recargues de metal duro en los bordes de trabajo, que pueden multiplicar varias veces la vida del diente. Un diente que dura más mantiene la profundidad constante y la cama de siembra uniforme durante toda la temporada.">Qui l'acciaio al boro fa la differenza. Il boro aumenta la temprabilità, così dopo il trattamento termico il dente raggiunge una durezza alta senza diventare fragile: resta tenace e resiste all'usura, e il rischio di rottura in campo si abbassa. Sui terreni più abrasivi si aggiungono placchette o riporti in metallo duro sui bordi di lavoro, che allungano la vita del dente anche di diverse volte. Un dente che dura di più tiene la profondità costante e il letto di semina uniforme per tutta la stagione.</p>
                     <a class="article__cta" href="#contatti">
-                      <span data-en="Request information" data-fr="Demander des informations" data-de="Informationen anfordern">Richiedi informazioni</span>
+                      <span data-en="Request information" data-fr="Demander des informations" data-de="Informationen anfordern" data-es="Solicitar información">Richiedi informazioni</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
                   </div>
@@ -363,30 +355,30 @@
               </article>
               <article class="glass product blog-card anim">
                 <div class="product__media"><img src="assets/img/field-combine-detail.jpg" alt="Lavorazione del terreno con la fresa" loading="lazy" /></div>
-                <span class="blog-card__cat" data-en="Rotary tilling" data-fr="Fraisage" data-de="Bodenfräsen">Fresatura</span>
-                <h3 data-en="Rotary tilling: balanced blades, less fuel" data-fr="Fraisage : couteaux équilibrés, moins de carburant" data-de="Bodenfräsen: ausgewuchtete Messer, weniger Verbrauch">Fresatura: zappe bilanciate, meno consumi</h3>
-                <p data-en="Why rotor balance matters and when it pays to change the blades." data-fr="Pourquoi l'équilibrage du rotor compte et quand il vaut mieux changer les couteaux." data-de="Warum die Rotorwucht zählt und wann sich der Messerwechsel lohnt.">Perché il bilanciamento del rotore conta e quando conviene cambiare le zappe.</p>
+                <span class="blog-card__cat" data-en="Rotary tilling" data-fr="Fraisage" data-de="Bodenfräsen" data-es="Fresado">Fresatura</span>
+                <h3 data-en="Rotary tilling: balanced blades, less fuel" data-fr="Fraisage : couteaux équilibrés, moins de carburant" data-de="Bodenfräsen: ausgewuchtete Messer, weniger Verbrauch" data-es="Fresado: cuchillas equilibradas, menos consumo">Fresatura: zappe bilanciate, meno consumi</h3>
+                <p data-en="Why rotor balance matters and when it pays to change the blades." data-fr="Pourquoi l'équilibrage du rotor compte et quand il vaut mieux changer les couteaux." data-de="Warum die Rotorwucht zählt und wann sich der Messerwechsel lohnt." data-es="Por qué importa el equilibrado del rotor y cuándo conviene cambiar las cuchillas.">Perché il bilanciamento del rotore conta e quando conviene cambiare le zappe.</p>
                 <details class="article">
                   <summary class="article__toggle">
-                    <span data-en="Read the article" data-fr="Lire l'article" data-de="Artikel lesen">Leggi l'articolo</span>
+                    <span data-en="Read the article" data-fr="Lire l'article" data-de="Artikel lesen" data-es="Leer el artículo">Leggi l'articolo</span>
                     <svg class="article__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </summary>
                   <div class="article__body">
-                    <p data-en="A rotary tiller breaks up compacted ground and prepares a fine bed, and it does so with blades that rotate and mix the soil. Unlike a power harrow, which stirs at one level, the tiller digs and turns: the blades work deeper and take more abrasion." data-fr="La fraise casse le sol compact et prépare un lit fin, et elle le fait avec des couteaux qui tournent et brassent la terre. À la différence de la herse rotative, qui mélange au même niveau, la fraise creuse et retourne : les couteaux travaillent plus profond et subissent plus d'abrasion." data-de="Die Bodenfräse bricht verdichteten Boden auf und bereitet ein feines Bett, und zwar mit Messern, die rotieren und die Erde durchmischen. Anders als die Kreiselegge, die auf einer Ebene mischt, gräbt und wendet die Fräse: Die Messer arbeiten tiefer und nehmen mehr Verschleiß auf.">La fresa rompe il terreno compatto e prepara un letto fine, e lo fa con zappe che ruotano e rimescolano la terra. A differenza dell'erpice rotante, che mescola sullo stesso livello, la fresa scava e rovescia: le zappe lavorano più a fondo e prendono più abrasione.</p>
-                    <p data-en="Balance is not a detail. The blades are fitted in opposing pairs, and each one has angles and a curve worked out to penetrate while drawing as little power as possible. If the rotor is out of balance because a blade is worn or missing, vibration rises, the bearings suffer and the job comes out uneven." data-fr="L'équilibrage n'est pas un détail. Les couteaux se montent par paires opposées, et chacun a des angles et une courbure étudiés pour pénétrer en absorbant le moins de puissance possible. Si le rotor est déséquilibré à cause d'un couteau usé ou manquant, les vibrations augmentent, les roulements souffrent et le travail devient irrégulier." data-de="Die Auswuchtung ist kein Detail. Die Messer werden paarweise gegenüberliegend montiert, und jedes hat Winkel und Krümmung, die auf ein Eindringen bei möglichst geringer Leistungsaufnahme ausgelegt sind. Ist der Rotor durch ein verschlissenes oder fehlendes Messer unwuchtig, steigen die Vibrationen, die Lager leiden und die Arbeit wird ungleichmäßig.">Il bilanciamento non è un dettaglio. Le zappe si montano a coppie contrapposte, e ognuna ha angoli e curvatura studiati per penetrare assorbendo meno potenza possibile. Se il rotore è sbilanciato per una zappa usurata o mancante, salgono le vibrazioni, si rovinano i cuscinetti e il lavoro diventa disuniforme.</p>
-                    <p data-en="Forged and treated blades stand up to this kind of load better: forging gives the toughness for hits against stones and roots, hardening gives the hardness against soil abrasion. It pays to check them at the start of each season, looking for cracks, a worn edge and loose bolts. Fitting the wrong blade or running it past its limit doubles how often you replace it and pushes fuel use up; matching it to the soil extends the life of the set and cuts downtime." data-fr="Les couteaux forgés et traités encaissent mieux ce type de sollicitation : le forgeage apporte la ténacité face aux chocs contre pierres et racines, la trempe apporte la dureté face à l'abrasion du sol. Mieux vaut les vérifier à chaque début de saison, en cherchant fissures, fil usé et boulons desserrés. Monter le mauvais couteau ou le pousser au-delà de sa limite double la fréquence de remplacement et fait grimper la consommation ; l'adapter au sol allonge la vie du jeu et réduit les immobilisations." data-de="Geschmiedete und behandelte Messer halten dieser Belastung besser stand: Das Schmieden liefert die Zähigkeit gegen Schläge auf Steine und Wurzeln, das Härten die Härte gegen den Bodenverschleiß. Es lohnt sich, sie zu jedem Saisonbeginn zu prüfen, auf Risse, abgenutzte Schneiden und lose Schrauben. Das falsche Messer zu montieren oder es über seine Grenze zu fahren, verdoppelt die Wechselhäufigkeit und treibt den Verbrauch hoch; es an den Boden anzupassen, verlängert die Lebensdauer des Satzes und verringert Stillstände.">Le zappe forgiate e trattate reggono meglio questo tipo di sforzo: la forgiatura dà la tenacità per gli urti contro sassi e radici, la tempra dà la durezza contro l'abrasione del terreno. Conviene controllarle a ogni inizio stagione, cercando cricche, filo consumato e bulloni allentati. Montare la zappa sbagliata o tirarla oltre il limite raddoppia la frequenza di cambio e fa salire i consumi; abbinarla al terreno allunga la vita del set e riduce i fermi macchina.</p>
+                    <p data-en="A rotary tiller breaks up compacted ground and prepares a fine bed, and it does so with blades that rotate and mix the soil. Unlike a power harrow, which stirs at one level, the tiller digs and turns: the blades work deeper and take more abrasion." data-fr="La fraise casse le sol compact et prépare un lit fin, et elle le fait avec des couteaux qui tournent et brassent la terre. À la différence de la herse rotative, qui mélange au même niveau, la fraise creuse et retourne : les couteaux travaillent plus profond et subissent plus d'abrasion." data-de="Die Bodenfräse bricht verdichteten Boden auf und bereitet ein feines Bett, und zwar mit Messern, die rotieren und die Erde durchmischen. Anders als die Kreiselegge, die auf einer Ebene mischt, gräbt und wendet die Fräse: Die Messer arbeiten tiefer und nehmen mehr Verschleiß auf." data-es="La fresadora rompe el terreno compacto y prepara un lecho fino, y lo hace con cuchillas que giran y remueven la tierra. A diferencia de la grada rotativa, que mezcla al mismo nivel, la fresadora excava y voltea: las cuchillas trabajan más a fondo y sufren más abrasión.">La fresa rompe il terreno compatto e prepara un letto fine, e lo fa con zappe che ruotano e rimescolano la terra. A differenza dell'erpice rotante, che mescola sullo stesso livello, la fresa scava e rovescia: le zappe lavorano più a fondo e prendono più abrasione.</p>
+                    <p data-en="Balance is not a detail. The blades are fitted in opposing pairs, and each one has angles and a curve worked out to penetrate while drawing as little power as possible. If the rotor is out of balance because a blade is worn or missing, vibration rises, the bearings suffer and the job comes out uneven." data-fr="L'équilibrage n'est pas un détail. Les couteaux se montent par paires opposées, et chacun a des angles et une courbure étudiés pour pénétrer en absorbant le moins de puissance possible. Si le rotor est déséquilibré à cause d'un couteau usé ou manquant, les vibrations augmentent, les roulements souffrent et le travail devient irrégulier." data-de="Die Auswuchtung ist kein Detail. Die Messer werden paarweise gegenüberliegend montiert, und jedes hat Winkel und Krümmung, die auf ein Eindringen bei möglichst geringer Leistungsaufnahme ausgelegt sind. Ist der Rotor durch ein verschlissenes oder fehlendes Messer unwuchtig, steigen die Vibrationen, die Lager leiden und die Arbeit wird ungleichmäßig." data-es="El equilibrado no es un detalle. Las cuchillas se montan en pares opuestos, y cada una tiene ángulos y curvatura estudiados para penetrar absorbiendo la menor potencia posible. Si el rotor está desequilibrado por una cuchilla desgastada o faltante, aumentan las vibraciones, se dañan los rodamientos y el trabajo se vuelve irregular.">Il bilanciamento non è un dettaglio. Le zappe si montano a coppie contrapposte, e ognuna ha angoli e curvatura studiati per penetrare assorbendo meno potenza possibile. Se il rotore è sbilanciato per una zappa usurata o mancante, salgono le vibrazioni, si rovinano i cuscinetti e il lavoro diventa disuniforme.</p>
+                    <p data-en="Forged and treated blades stand up to this kind of load better: forging gives the toughness for hits against stones and roots, hardening gives the hardness against soil abrasion. It pays to check them at the start of each season, looking for cracks, a worn edge and loose bolts. Fitting the wrong blade or running it past its limit doubles how often you replace it and pushes fuel use up; matching it to the soil extends the life of the set and cuts downtime." data-fr="Les couteaux forgés et traités encaissent mieux ce type de sollicitation : le forgeage apporte la ténacité face aux chocs contre pierres et racines, la trempe apporte la dureté face à l'abrasion du sol. Mieux vaut les vérifier à chaque début de saison, en cherchant fissures, fil usé et boulons desserrés. Monter le mauvais couteau ou le pousser au-delà de sa limite double la fréquence de remplacement et fait grimper la consommation ; l'adapter au sol allonge la vie du jeu et réduit les immobilisations." data-de="Geschmiedete und behandelte Messer halten dieser Belastung besser stand: Das Schmieden liefert die Zähigkeit gegen Schläge auf Steine und Wurzeln, das Härten die Härte gegen den Bodenverschleiß. Es lohnt sich, sie zu jedem Saisonbeginn zu prüfen, auf Risse, abgenutzte Schneiden und lose Schrauben. Das falsche Messer zu montieren oder es über seine Grenze zu fahren, verdoppelt die Wechselhäufigkeit und treibt den Verbrauch hoch; es an den Boden anzupassen, verlängert die Lebensdauer des Satzes und verringert Stillstände." data-es="Las cuchillas forjadas y tratadas resisten mejor este tipo de esfuerzo: el forjado aporta la tenacidad frente a los golpes contra piedras y raíces, el temple aporta la dureza frente a la abrasión del terreno. Conviene revisarlas al comienzo de cada temporada, buscando grietas, filo desgastado y tornillos flojos. Montar la cuchilla equivocada o forzarla más allá de su límite duplica la frecuencia de cambio y aumenta el consumo; adaptarla al terreno alarga la vida del juego y reduce las paradas de la máquina.">Le zappe forgiate e trattate reggono meglio questo tipo di sforzo: la forgiatura dà la tenacità per gli urti contro sassi e radici, la tempra dà la durezza contro l'abrasione del terreno. Conviene controllarle a ogni inizio stagione, cercando cricche, filo consumato e bulloni allentati. Montare la zappa sbagliata o tirarla oltre il limite raddoppia la frequenza di cambio e fa salire i consumi; abbinarla al terreno allunga la vita del set e riduce i fermi macchina.</p>
                     <a class="article__cta" href="#contatti">
-                      <span data-en="Request information" data-fr="Demander des informations" data-de="Informationen anfordern">Richiedi informazioni</span>
+                      <span data-en="Request information" data-fr="Demander des informations" data-de="Informationen anfordern" data-es="Solicitar información">Richiedi informazioni</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
                   </div>
                 </details>
               </article>
             </div>
-            <button class="blog-nav blog-nav--prev" type="button" data-blog-prev aria-label="Articolo precedente" data-en-aria="Previous article" data-fr-aria="Article précédent" data-de-aria="Vorheriger Artikel">
+            <button class="blog-nav blog-nav--prev" type="button" data-blog-prev aria-label="Articolo precedente" data-en-aria="Previous article" data-fr-aria="Article précédent" data-de-aria="Vorheriger Artikel" data-es-aria="Artículo anterior">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <button class="blog-nav blog-nav--next" type="button" data-blog-next aria-label="Articolo successivo" data-en-aria="Next article" data-fr-aria="Article suivant" data-de-aria="Nächster Artikel">
+            <button class="blog-nav blog-nav--next" type="button" data-blog-next aria-label="Articolo successivo" data-en-aria="Next article" data-fr-aria="Article suivant" data-de-aria="Nächster Artikel" data-es-aria="Artículo siguiente">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             </div>
@@ -395,26 +387,26 @@
           <!-- ============ STABILIMENTI ============ -->
           <section class="section" id="stabilimenti" aria-label="Stabilimenti">
             <div class="view__head anim">
-              <h2 class="view__title plant-title" data-en="Three plants, one integrated supply chain." data-fr="Trois sites, une chaîne d'approvisionnement intégrée." data-de="Drei Standorte, eine integrierte Lieferkette.">Tre stabilimenti, una filiera integrata.</h2>
+              <h2 class="view__title plant-title" data-en="Three plants, one integrated supply chain." data-fr="Trois sites, une chaîne d'approvisionnement intégrée." data-de="Drei Standorte, eine integrierte Lieferkette." data-es="Tres plantas, una cadena de producción integrada.">Tre stabilimenti, una filiera integrata.</h2>
             </div>
             <!-- Video a sinistra, card degli stabilimenti impilate a destra -->
             <div class="plant-layout">
             <!-- Clip aziendale: breve, muta, in loop (versione leggera per il web) -->
             <div class="plant-video glass anim">
-              <video src="assets/video/stabilimenti-clip.mp4" poster="assets/img/stabilimenti-clip-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video degli stabilimenti SABA" data-en-aria="Video of the SABA plants" data-fr-aria="Vidéo des sites SABA" data-de-aria="Video der SABA-Standorte"></video>
+              <video src="assets/video/stabilimenti-clip.mp4" poster="assets/img/stabilimenti-clip-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video degli stabilimenti SABA" data-en-aria="Video of the SABA plants" data-fr-aria="Vidéo des sites SABA" data-de-aria="Video der SABA-Standorte" data-es-aria="Vídeo de las plantas SABA"></video>
             </div>
             <div class="plant-grid">
               <article class="glass plant anim">
                 <div class="plant__top">
                   <span class="plant__tag">01</span>
                   <div class="plant__head">
-                    <span class="plant__role" data-en="Forging &amp; die refurbishing" data-fr="Forgeage &amp; réfection des matrices" data-de="Schmieden &amp; Gesenkaufarbeitung">Stampaggio &amp; rifacimento stampi</span>
+                    <span class="plant__role" data-en="Forging &amp; die refurbishing" data-fr="Forgeage &amp; réfection des matrices" data-de="Schmieden &amp; Gesenkaufarbeitung" data-es="Forjado y reacondicionamiento de matrices">Stampaggio &amp; rifacimento stampi</span>
                   </div>
                 </div>
-                <p data-en="Presses and friction screw presses shape steel at over 1,100 °C; the in-house machine shop builds and refurbishes the dies for every part." data-fr="Presses et presses à friction façonnent l'acier à plus de 1 100 °C ; l'atelier mécanique interne réalise et régénère les matrices de chaque pièce." data-de="Pressen und Spindelpressen formen den Stahl bei über 1.100 °C; die hauseigene mechanische Werkstatt fertigt und regeneriert die Gesenke jedes Artikels.">Presse e bilancieri danno forma all'acciaio oltre i 1.100 °C; l'officina meccanica interna realizza e rigenera gli stampi di ogni articolo.</p>
+                <p data-en="Presses and friction screw presses shape steel at over 1,100 °C; the in-house machine shop builds and refurbishes the dies for every part." data-fr="Presses et presses à friction façonnent l'acier à plus de 1 100 °C ; l'atelier mécanique interne réalise et régénère les matrices de chaque pièce." data-de="Pressen und Spindelpressen formen den Stahl bei über 1.100 °C; die hauseigene mechanische Werkstatt fertigt und regeneriert die Gesenke jedes Artikels." data-es="Prensas y martinetes dan forma al acero por encima de los 1.100 °C; el taller mecánico interno fabrica y regenera las matrices de cada artículo.">Presse e bilancieri danno forma all'acciaio oltre i 1.100 °C; l'officina meccanica interna realizza e rigenera gli stampi di ogni articolo.</p>
                 <div class="plant__foot">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
-                  <span data-en="Loc. Fornaci, 9 · Nozza di Vestone (BS) · Italy" data-fr="Loc. Fornaci, 9 · Nozza di Vestone (BS) · Italie" data-de="Loc. Fornaci, 9 · Nozza di Vestone (BS) · Italien">Loc. Fornaci, 9 · Nozza di Vestone (BS) · Italia</span>
+                  <span data-en="Loc. Fornaci, 9 · Nozza di Vestone (BS) · Italy" data-fr="Loc. Fornaci, 9 · Nozza di Vestone (BS) · Italie" data-de="Loc. Fornaci, 9 · Nozza di Vestone (BS) · Italien" data-es="Loc. Fornaci, 9 · Nozza di Vestone (BS) · Italia">Loc. Fornaci, 9 · Nozza di Vestone (BS) · Italia</span>
                 </div>
               </article>
               <article class="glass plant anim">
@@ -422,13 +414,13 @@
                 <div class="plant__top">
                   <span class="plant__tag">02</span>
                   <div class="plant__head">
-                    <span class="plant__role" data-en="Automated forging &amp; machining" data-fr="Forgeage automatisé &amp; usinage" data-de="Automatisiertes Schmieden &amp; Bearbeitung">Stampaggio automatizzato &amp; meccanica</span>
+                    <span class="plant__role" data-en="Automated forging &amp; machining" data-fr="Forgeage automatisé &amp; usinage" data-de="Automatisiertes Schmieden &amp; Bearbeitung" data-es="Forjado automatizado y mecanizado">Stampaggio automatizzato &amp; meccanica</span>
                   </div>
                 </div>
-                <p data-en="Automated forging cells and machining operations deliver high volumes with consistent quality." data-fr="Îlots de forgeage automatisés et usinages mécaniques assurent de grands volumes avec une qualité constante." data-de="Automatisierte Schmiedezellen und mechanische Bearbeitung sichern große Stückzahlen bei konstanter Qualität.">Isole di stampaggio automatizzate e lavorazioni meccaniche garantiscono grandi volumi con qualità costante.</p>
+                <p data-en="Automated forging cells and machining operations deliver high volumes with consistent quality." data-fr="Îlots de forgeage automatisés et usinages mécaniques assurent de grands volumes avec une qualité constante." data-de="Automatisierte Schmiedezellen und mechanische Bearbeitung sichern große Stückzahlen bei konstanter Qualität." data-es="Células de forjado automatizadas y mecanizados garantizan grandes volúmenes con calidad constante.">Isole di stampaggio automatizzate e lavorazioni meccaniche garantiscono grandi volumi con qualità costante.</p>
                 <div class="plant__foot">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
-                  <span data-en="Strada di Ponte Re · Barghe (BS) · Italy" data-fr="Strada di Ponte Re · Barghe (BS) · Italie" data-de="Strada di Ponte Re · Barghe (BS) · Italien">Strada di Ponte Re · Barghe (BS) · Italia</span>
+                  <span data-en="Strada di Ponte Re · Barghe (BS) · Italy" data-fr="Strada di Ponte Re · Barghe (BS) · Italie" data-de="Strada di Ponte Re · Barghe (BS) · Italien" data-es="Strada di Ponte Re · Barghe (BS) · Italia">Strada di Ponte Re · Barghe (BS) · Italia</span>
                 </div>
               </article>
               <article class="glass plant anim">
@@ -436,46 +428,46 @@
                 <div class="plant__top">
                   <span class="plant__tag">03</span>
                   <div class="plant__head">
-                    <span class="plant__role" data-en="Heat treatment &amp; warehouse" data-fr="Traitements thermiques &amp; entrepôt" data-de="Wärmebehandlung &amp; Lager">Trattamenti termici &amp; magazzino</span>
+                    <span class="plant__role" data-en="Heat treatment &amp; warehouse" data-fr="Traitements thermiques &amp; entrepôt" data-de="Wärmebehandlung &amp; Lager" data-es="Tratamientos térmicos y almacén">Trattamenti termici &amp; magazzino</span>
                   </div>
                 </div>
-                <p data-en="Hardening and tempering lines calibrate hardness and toughness; the automated warehouse handles storage and shipping." data-fr="Les lignes de trempe et de revenu calibrent dureté et ténacité ; l'entrepôt automatisé gère le stockage et les expéditions." data-de="Härte- und Anlasslinien kalibrieren Härte und Zähigkeit; das automatisierte Lager übernimmt Lagerung und Versand.">Linee di tempra e rinvenimento calibrano durezza e tenacità; il magazzino automatizzato gestisce stoccaggio e spedizioni.</p>
+                <p data-en="Hardening and tempering lines calibrate hardness and toughness; the automated warehouse handles storage and shipping." data-fr="Les lignes de trempe et de revenu calibrent dureté et ténacité ; l'entrepôt automatisé gère le stockage et les expéditions." data-de="Härte- und Anlasslinien kalibrieren Härte und Zähigkeit; das automatisierte Lager übernimmt Lagerung und Versand." data-es="Líneas de temple y revenido calibran dureza y tenacidad; el almacén automatizado gestiona el almacenamiento y los envíos.">Linee di tempra e rinvenimento calibrano durezza e tenacità; il magazzino automatizzato gestisce stoccaggio e spedizioni.</p>
                 <div class="plant__foot">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
-                  <span data-en="Via Provinciale, 10 · Barghe (BS) · Italy" data-fr="Via Provinciale, 10 · Barghe (BS) · Italie" data-de="Via Provinciale, 10 · Barghe (BS) · Italien">Via Provinciale, 10 · Barghe (BS) · Italia</span>
+                  <span data-en="Via Provinciale, 10 · Barghe (BS) · Italy" data-fr="Via Provinciale, 10 · Barghe (BS) · Italie" data-de="Via Provinciale, 10 · Barghe (BS) · Italien" data-es="Via Provinciale, 10 · Barghe (BS) · Italia">Via Provinciale, 10 · Barghe (BS) · Italia</span>
                 </div>
               </article>
             </div>
             </div>
             <!-- Sostenibilità: fotovoltaico e energia 100% rinnovabile -->
             <div class="glass plant-green anim">
-              <span class="plant-green__tag" data-en="Sustainability" data-fr="Durabilité" data-de="Nachhaltigkeit">Sostenibilità</span>
+              <span class="plant-green__tag" data-en="Sustainability" data-fr="Durabilité" data-de="Nachhaltigkeit" data-es="Sostenibilidad">Sostenibilità</span>
               <div class="plant-green__item">
                 <span class="plant-green__icon" aria-hidden="true">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
                 </span>
-                <p data-html data-en="&lt;b&gt;1.1 MW&lt;/b&gt; of photovoltaic panels on the roofs of our plants" data-fr="&lt;b&gt;1,1 MW&lt;/b&gt; de panneaux photovoltaïques sur les toits de nos sites" data-de="&lt;b&gt;1,1 MW&lt;/b&gt; Photovoltaik auf den Dächern unserer Werke"><b>1,1 MW</b> di pannelli fotovoltaici sui tetti dei nostri stabilimenti</p>
+                <p data-html data-en="&lt;b&gt;1.1 MW&lt;/b&gt; of photovoltaic panels on the roofs of our plants" data-fr="&lt;b&gt;1,1 MW&lt;/b&gt; de panneaux photovoltaïques sur les toits de nos sites" data-de="&lt;b&gt;1,1 MW&lt;/b&gt; Photovoltaik auf den Dächern unserer Werke" data-es="&lt;b&gt;1,1 MW&lt;/b&gt; de paneles fotovoltaicos en los tejados de nuestras plantas"><b>1,1 MW</b> di pannelli fotovoltaici sui tetti dei nostri stabilimenti</p>
               </div>
               <div class="plant-green__item">
                 <span class="plant-green__icon" aria-hidden="true">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 20c0-9 5-14 14-15-1 9-6 14-13 14M5 20c2-5 5-8 9-10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
-                <p data-html data-en="&lt;b&gt;100%&lt;/b&gt; of our energy from renewable sources" data-fr="&lt;b&gt;100 %&lt;/b&gt; de notre énergie d'origine renouvelable" data-de="&lt;b&gt;100 %&lt;/b&gt; unserer Energie aus erneuerbaren Quellen"><b>100%</b> dell'energia che usiamo viene da fonti rinnovabili</p>
+                <p data-html data-en="&lt;b&gt;100%&lt;/b&gt; of our energy from renewable sources" data-fr="&lt;b&gt;100 %&lt;/b&gt; de notre énergie d'origine renouvelable" data-de="&lt;b&gt;100 %&lt;/b&gt; unserer Energie aus erneuerbaren Quellen" data-es="&lt;b&gt;100%&lt;/b&gt; de nuestra energía procede de fuentes renovables"><b>100%</b> dell'energia che usiamo viene da fonti rinnovabili</p>
               </div>
             </div>
             <!-- Mappa dei tre stabilimenti (Leaflet + tile chiare CARTO, pin corallo numerati).
                  Pin geocodificati sugli indirizzi reali; ritoccabili in assets/js/app.js -->
             <div class="contact-map anim">
-              <span class="contact-map__tag" data-en="Where we are" data-fr="Où nous sommes" data-de="Wo wir sind">Dove siamo</span>
-              <div id="map" class="glass contact-map__canvas" aria-label="Mappa degli stabilimenti SABA: uno a Vestone e due a Barghe (BS)" data-en-aria="Map of the SABA plants: one in Vestone and two in Barghe (BS)" data-fr-aria="Carte des sites SABA : un à Vestone et deux à Barghe (BS)" data-de-aria="Karte der SABA-Standorte: eines in Vestone, zwei in Barghe (BS)"></div>
+              <span class="contact-map__tag" data-en="Where we are" data-fr="Où nous sommes" data-de="Wo wir sind" data-es="Dónde estamos">Dove siamo</span>
+              <div id="map" class="glass contact-map__canvas" aria-label="Mappa degli stabilimenti SABA: uno a Vestone e due a Barghe (BS)" data-en-aria="Map of the SABA plants: one in Vestone and two in Barghe (BS)" data-fr-aria="Carte des sites SABA : un à Vestone et deux à Barghe (BS)" data-de-aria="Karte der SABA-Standorte: eines in Vestone, zwei in Barghe (BS)" data-es-aria="Mapa de las plantas SABA: una en Vestone y dos en Barghe (BS)"></div>
             </div>
           </section>
 
           <!-- ============ CONTATTI ============ -->
           <section class="section section--grid" id="contatti" aria-label="Contatti">
             <div>
-              <h2 class="view__title anim" data-en="Need a forged part that lasts? Let's talk." data-fr="Besoin d'une pièce forgée qui dure ? Parlons-en." data-de="Brauchen Sie ein geschmiedetes Teil, das hält? Sprechen wir darüber.">Ti serve un articolo forgiato che duri? Parliamone.</h2>
-              <p class="view__lead anim" data-en="Tell us what you need. We'll get back to you shortly with a concrete proposal." data-fr="Dites-nous ce dont vous avez besoin. Nous vous répondrons rapidement avec une proposition concrète." data-de="Sagen Sie uns, was Sie benötigen. Wir melden uns in Kürze mit einem konkreten Vorschlag.">Raccontaci di cosa hai bisogno. Ti risponderemo a breve con una proposta concreta.</p>
+              <h2 class="view__title anim" data-en="Need a forged part that lasts? Let's talk." data-fr="Besoin d'une pièce forgée qui dure ? Parlons-en." data-de="Brauchen Sie ein geschmiedetes Teil, das hält? Sprechen wir darüber." data-es="¿Necesitas un artículo forjado que dure? Hablemos.">Ti serve un articolo forgiato che duri? Parliamone.</h2>
+              <p class="view__lead anim" data-en="Tell us what you need. We'll get back to you shortly with a concrete proposal." data-fr="Dites-nous ce dont vous avez besoin. Nous vous répondrons rapidement avec une proposition concrète." data-de="Sagen Sie uns, was Sie benötigen. Wir melden uns in Kürze mit einem konkreten Vorschlag." data-es="Cuéntanos qué necesitas. Te responderemos en breve con una propuesta concreta.">Raccontaci di cosa hai bisogno. Ti risponderemo a breve con una proposta concreta.</p>
               <ul class="contact-list">
                 <li class="glass anim">
                   <span class="contact-list__icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -487,37 +479,42 @@
                 </li>
                 <li class="glass anim">
                   <span class="contact-list__icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg></span>
-                  <span data-en="Registered office · Loc. Fornaci, 9 · 25078 Vestone (BS), Italy" data-fr="Siège social · Loc. Fornaci, 9 · 25078 Vestone (BS), Italie" data-de="Firmensitz · Loc. Fornaci, 9 · 25078 Vestone (BS), Italien">Sede legale · Loc. Fornaci, 9 · 25078 Vestone (BS), Italia</span>
+                  <span data-en="Registered office · Loc. Fornaci, 9 · 25078 Vestone (BS), Italy" data-fr="Siège social · Loc. Fornaci, 9 · 25078 Vestone (BS), Italie" data-de="Firmensitz · Loc. Fornaci, 9 · 25078 Vestone (BS), Italien" data-es="Domicilio social · Loc. Fornaci, 9 · 25078 Vestone (BS), Italia">Sede legale · Loc. Fornaci, 9 · 25078 Vestone (BS), Italia</span>
                 </li>
               </ul>
             </div>
-            <!-- NOTA: il form è front-end. Per ricevere i messaggi collegare un endpoint (es. Formspree) o un backend. -->
-            <form class="glass contact-form anim" data-contact-form novalidate>
-              <p class="form__status" data-en="Thank you! Your message has been sent. We'll get back to you soon." data-fr="Merci ! Votre message a été envoyé. Nous vous répondrons sous peu." data-de="Danke! Ihre Nachricht wurde gesendet. Wir melden uns in Kürze bei Ihnen.">Grazie! Il tuo messaggio è stato inviato. Ti risponderemo a breve.</p>
+            <!-- Form collegato a Web3Forms (https://web3forms.com), invio via fetch in app.js, nessun backend. -->
+            <form class="glass contact-form anim" data-contact-form novalidate action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="8ae0bd37-3f5a-4639-8e70-7d5769d99fe2" />
+              <input type="hidden" name="subject" value="Nuova richiesta dal sito SABA" />
+              <input type="hidden" name="from_name" value="Modulo contatti SABA" />
+              <input type="checkbox" name="botcheck" class="form__botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <p class="form__status" data-form-status="ok" data-en="Thank you! Your message has been sent. We'll get back to you soon." data-fr="Merci ! Votre message a été envoyé. Nous vous répondrons sous peu." data-de="Danke! Ihre Nachricht wurde gesendet. Wir melden uns in Kürze bei Ihnen." data-es="¡Gracias! Tu mensaje ha sido enviado. Te responderemos en breve.">Grazie! Il tuo messaggio è stato inviato. Ti risponderemo a breve.</p>
+              <p class="form__status" data-form-status="error" data-en="Something went wrong. Please try again or email us at info@saba-forging.it." data-fr="Une erreur s'est produite. Réessayez ou écrivez-nous à info@saba-forging.it." data-de="Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns an info@saba-forging.it." data-es="Se ha producido un error. Vuelve a intentarlo o escríbenos a info@saba-forging.it.">Si è verificato un errore. Riprova oppure scrivici a info@saba-forging.it.</p>
               <div class="form__row">
                 <div class="field">
-                  <label for="name" data-en="Name and surname" data-fr="Nom et prénom" data-de="Vor- und Nachname">Nome e cognome</label>
-                  <input id="name" name="name" type="text" autocomplete="name" required placeholder="Mario Rossi" data-en-placeholder="John Smith" data-fr-placeholder="Jean Dupont" data-de-placeholder="Max Mustermann" />
+                  <label for="name" data-en="Name and surname" data-fr="Nom et prénom" data-de="Vor- und Nachname" data-es="Nombre y apellidos">Nome e cognome</label>
+                  <input id="name" name="name" type="text" autocomplete="name" required placeholder="Mario Rossi" data-en-placeholder="John Smith" data-fr-placeholder="Jean Dupont" data-de-placeholder="Max Mustermann" data-es-placeholder="Juan Pérez" />
                 </div>
                 <div class="field">
-                  <label for="email" data-en="Email" data-fr="E-mail" data-de="E-Mail">Email</label>
-                  <input id="email" name="email" type="email" autocomplete="email" required placeholder="mario@azienda.it" data-en-placeholder="john@company.com" data-fr-placeholder="jean@entreprise.fr" data-de-placeholder="max@unternehmen.de" />
+                  <label for="email" data-en="Email" data-fr="E-mail" data-de="E-Mail" data-es="Correo electrónico">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required placeholder="mario@azienda.it" data-en-placeholder="john@company.com" data-fr-placeholder="jean@entreprise.fr" data-de-placeholder="max@unternehmen.de" data-es-placeholder="juan@empresa.es" />
                 </div>
               </div>
               <div class="field">
-                <label for="company" data-en="Company" data-fr="Entreprise" data-de="Unternehmen">Azienda</label>
-                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Es. Rossi Agri Srl" data-en-placeholder="e.g. Smith Agri Ltd" data-fr-placeholder="Ex. Dupont Agri SARL" data-de-placeholder="z. B. Mustermann Agrar GmbH" />
+                <label for="company" data-en="Company" data-fr="Entreprise" data-de="Unternehmen" data-es="Empresa">Azienda</label>
+                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Es. Rossi Agri Srl" data-en-placeholder="e.g. Smith Agri Ltd" data-fr-placeholder="Ex. Dupont Agri SARL" data-de-placeholder="z. B. Mustermann Agrar GmbH" data-es-placeholder="Ej. Pérez Agrícola S.L." />
               </div>
               <div class="field">
-                <label for="message" data-en="Message" data-fr="Message" data-de="Nachricht">Messaggio</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Descrivi il pezzo, le quantità o allega i riferimenti…" data-en-placeholder="Describe the part, quantities or references…" data-fr-placeholder="Décrivez la pièce, les quantités ou joignez les références…" data-de-placeholder="Beschreiben Sie das Teil, die Mengen oder fügen Sie Referenzen bei…"></textarea>
+                <label for="message" data-en="Message" data-fr="Message" data-de="Nachricht" data-es="Mensaje">Messaggio</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Descrivi il pezzo, le quantità o allega i riferimenti…" data-en-placeholder="Describe the part, quantities or references…" data-fr-placeholder="Décrivez la pièce, les quantités ou joignez les références…" data-de-placeholder="Beschreiben Sie das Teil, die Mengen oder fügen Sie Referenzen bei…" data-es-placeholder="Describe la pieza, las cantidades o adjunta referencias…"></textarea>
               </div>
               <label class="form__consent">
                 <input type="checkbox" name="consent" required />
-                <span data-html data-en="I consent to the processing of my personal data (<a href='privacy-policy.html' target='_blank' rel='noopener'>privacy policy</a>)." data-fr="J'accepte le traitement de mes données personnelles (<a href='privacy-policy.html' target='_blank' rel='noopener'>politique de confidentialité</a>)." data-de="Ich stimme der Verarbeitung meiner personenbezogenen Daten zu (<a href='privacy-policy.html' target='_blank' rel='noopener'>Datenschutzerklärung</a>).">Acconsento al trattamento dei dati personali (<a href="privacy-policy.html" target="_blank" rel="noopener">privacy policy</a>).</span>
+                <span data-html data-en="I consent to the processing of my personal data (<a href='privacy-policy.html' target='_blank' rel='noopener'>privacy policy</a>)." data-fr="J'accepte le traitement de mes données personnelles (<a href='privacy-policy.html' target='_blank' rel='noopener'>politique de confidentialité</a>)." data-de="Ich stimme der Verarbeitung meiner personenbezogenen Daten zu (<a href='privacy-policy.html' target='_blank' rel='noopener'>Datenschutzerklärung</a>)." data-es="Doy mi consentimiento para el tratamiento de mis datos personales (<a href='privacy-policy.html' target='_blank' rel='noopener'>política de privacidad</a>).">Acconsento al trattamento dei dati personali (<a href="privacy-policy.html" target="_blank" rel="noopener">privacy policy</a>).</span>
               </label>
               <button class="btn-pill btn-pill--full" type="submit">
-                <span data-en="Send message" data-fr="Envoyer le message" data-de="Nachricht senden">Invia messaggio</span>
+                <span data-en="Send message" data-fr="Envoyer le message" data-de="Nachricht senden" data-es="Enviar mensaje">Invia messaggio</span>
                 <span class="btn-pill__circle" aria-hidden="true">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
@@ -528,11 +525,11 @@
 
         <!-- ============ PIÈ DI CORNICE ============ -->
         <footer class="frame-foot">
-          <span>© <span data-year>2026</span> SABA S.r.l. · <span data-en="VAT IT00680570983" data-fr="TVA IT00680570983" data-de="USt-IdNr. IT00680570983">P.IVA IT00680570983</span></span>
+          <span>© <span data-year>2026</span> SABA S.r.l. · <span data-en="VAT IT00680570983" data-fr="TVA IT00680570983" data-de="USt-IdNr. IT00680570983" data-es="IVA IT00680570983">P.IVA IT00680570983</span></span>
           <span class="frame-foot__mono">QUALITY, EVERYWHERE</span>
           <span>
-            <a href="privacy-policy.html" data-en="Privacy Policy" data-fr="Politique de confidentialité" data-de="Datenschutz">Privacy Policy</a> ·
-            <a href="cookie-policy.html" data-en="Cookie Policy" data-fr="Politique cookies" data-de="Cookie-Richtlinie">Cookie Policy</a>
+            <a href="privacy-policy.html" data-en="Privacy Policy" data-fr="Politique de confidentialité" data-de="Datenschutz" data-es="Política de privacidad">Privacy Policy</a> ·
+            <a href="cookie-policy.html" data-en="Cookie Policy" data-fr="Politique cookies" data-de="Cookie-Richtlinie" data-es="Política de cookies">Cookie Policy</a>
           </span>
         </footer>
       </div>
@@ -541,15 +538,15 @@
 
   <!-- ============ MENU MOBILE ============ -->
   <div class="mobile-menu" id="mobile-menu">
-    <button class="mobile-menu__close" type="button" aria-label="Chiudi menu" data-en-aria="Close menu" data-fr-aria="Fermer le menu" data-de-aria="Menü schließen">
+    <button class="mobile-menu__close" type="button" aria-label="Chiudi menu" data-en-aria="Close menu" data-fr-aria="Fermer le menu" data-de-aria="Menü schließen" data-es-aria="Cerrar menú">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
     </button>
     <ul>
-      <li><a href="#home" data-en="Home" data-fr="Accueil" data-de="Startseite">Home</a></li>
-      <li><a href="#azienda" data-en="Company" data-fr="Entreprise" data-de="Unternehmen">Azienda</a></li>
-      <li><a href="#prodotti" data-en="Products" data-fr="Produits" data-de="Produkte">Prodotti</a></li><li><a href="#blog" data-en="Blog" data-fr="Blog" data-de="Blog">Blog</a></li>
-      <li><a href="#stabilimenti" data-en="Plants" data-fr="Sites" data-de="Standorte">Stabilimenti</a></li>
-      <li><a href="#contatti" data-en="Contact" data-fr="Contact" data-de="Kontakt">Contatti</a></li>
+      <li><a href="#home" data-en="Home" data-fr="Accueil" data-de="Startseite" data-es="Inicio">Home</a></li>
+      <li><a href="#azienda" data-en="Company" data-fr="Entreprise" data-de="Unternehmen" data-es="Empresa">Azienda</a></li>
+      <li><a href="#prodotti" data-en="Products" data-fr="Produits" data-de="Produkte" data-es="Productos">Prodotti</a></li><li><a href="#blog" data-en="Blog" data-fr="Blog" data-de="Blog" data-es="Blog">Blog</a></li>
+      <li><a href="#stabilimenti" data-en="Plants" data-fr="Sites" data-de="Standorte" data-es="Plantas">Stabilimenti</a></li>
+      <li><a href="#contatti" data-en="Contact" data-fr="Contact" data-de="Kontakt" data-es="Contacto">Contatti</a></li>
     </ul>
     <div class="mobile-menu__foot">
       <a href="mailto:info@saba-forging.it">info@saba-forging.it</a>

@@ -174,7 +174,17 @@
     });
   }
 
-  /* ---------- Dropdown lingue (da mobile) ---------- */
+  /* ---------- Dropdown lingue (desktop + mobile) ---------- */
+  /* SVG invece di emoji bandiera: su Windows le emoji bandiera ricadono su
+     testo semplice (nessun font di sistema con i glifi), un'SVG inline e'
+     identica su ogni piattaforma. */
+  var LANG_FLAGS = {
+    it: '<svg class="lang-flag" width="18" height="13" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg>',
+    en: '<svg class="lang-flag" width="18" height="13" viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#012169"/><path d="M0 0L60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0L60 30M60 0L0 30" stroke="#c8102e" stroke-width="2"/><path d="M30 0V30M0 15H60" stroke="#fff" stroke-width="10"/><path d="M30 0V30M0 15H60" stroke="#c8102e" stroke-width="6"/></svg>',
+    fr: '<svg class="lang-flag" width="18" height="13" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#0055a4"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ef4135"/></svg>',
+    de: '<svg class="lang-flag" width="18" height="13" viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#dd0000"/><rect y="2" width="5" height="1" fill="#ffce00"/></svg>',
+    es: '<svg class="lang-flag" width="18" height="13" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#aa151b"/><rect y="0.5" width="3" height="1" fill="#f1bf00"/></svg>'
+  };
   var langDropdown = document.querySelector("[data-lang-dropdown]");
   if (langDropdown) {
     var langBtn = langDropdown.querySelector(".lang-dropdown__btn");
@@ -186,7 +196,8 @@
     }
     function updateLangLabel() {
       if (langCurrent) {
-        langCurrent.textContent = (document.documentElement.getAttribute("lang") || "it").toUpperCase();
+        var lang = document.documentElement.getAttribute("lang") || "it";
+        langCurrent.innerHTML = (LANG_FLAGS[lang] || "") + " " + lang.toUpperCase();
       }
     }
 
@@ -218,21 +229,54 @@
     });
   }
 
-  /* ---------- Form contatti ---------- */
+  /* ---------- Form contatti (Web3Forms, senza backend) ---------- */
   var form = document.querySelector("[data-contact-form]");
   if (form) {
+    var statusOk = form.querySelector('[data-form-status="ok"]');
+    var statusError = form.querySelector('[data-form-status="error"]');
+    var submitBtn = form.querySelector('button[type="submit"]');
+
+    function showStatus(visible) {
+      [statusOk, statusError].forEach(function (el) {
+        if (!el) return;
+        el.classList.remove("is-visible");
+        el.removeAttribute("role");
+      });
+      if (visible) {
+        visible.classList.add("is-visible");
+        visible.setAttribute("role", "status");
+      }
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      var status = form.querySelector(".form__status");
-      if (status) {
-        status.classList.add("is-visible");
-        status.setAttribute("role", "status");
-      }
-      form.reset();
+      showStatus(null);
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(form.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form)
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data && data.success) {
+            showStatus(statusOk);
+            form.reset();
+          } else {
+            showStatus(statusError);
+          }
+        })
+        .catch(function () {
+          showStatus(statusError);
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
