@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
+*~
+
+# Claude Code — impostazioni locali per-utente
+.claude/settings.local.json
+
+# Screenshot temporanei / artefatti di test
+.playwright-cli/

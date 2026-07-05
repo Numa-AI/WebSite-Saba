@@ -1,0 +1,63 @@
+# SABA S.r.l. — Sito vetrina
+
+Sito statico (HTML/CSS/JS, nessun build) per **SABA S.r.l.**, azienda di **forgiatura a caldo di ricambi per macchine agricole** (mazze trinciasermenti, denti per erpice, zappe per frese, vomeri/punte, ricambi su disegno), con **3 stabilimenti** (Forgiatura / Trattamenti termici / Lavorazione & finitura). Tagline: *"QUALITY, EVERYWHERE"*.
+
+## Struttura
+
+Sito **a pagina unica** ("Fork Terra Nova"): tutto in `index.html`, con sezioni scorribili collegate dalla navigazione ad ancora (`#home`, `#azienda`, `#prodotti`, `#stabilimenti`, `#contatti`; più il marquee clienti `#clienti`).
+
+```text
+index.html                     Pagina unica (home, clienti, azienda, prodotti, stabilimenti, contatti)
+assets/css/styles.css          Design system (variabili CSS, glassmorphism, componenti, animazioni)
+assets/js/i18n.js              Motore traduzioni IT/EN/FR/DE (data-en/fr/de accanto all'italiano)
+assets/js/app.js               Reveal allo scroll, scrollspy, contatori, menu mobile, dropdown lingue, form, mappa
+assets/vendor/leaflet.css      Libreria mappa (locale, no CDN)
+assets/vendor/leaflet.js       Libreria mappa (locale, no CDN)
+assets/img/                    Logo SABA, loghi clienti, immagini prodotti/campo, sfondi hero e contatti, poster video
+assets/video/stabilimenti-clip.mp4   Clip stabilimenti (muta, in loop, sezione Stabilimenti)
+```
+
+Font caricati da Google Fonts (Space Grotesk + Space Mono). La mappa dei 3 stabilimenti usa Leaflet servito in locale da `assets/vendor/`.
+
+## ⚠️ REGOLA LINGUE (obbligatoria)
+
+Il sito è **multilingue: Italiano (default), Inglese, Francese, Tedesco**.
+
+L'italiano è il testo scritto direttamente nell'HTML. Le altre lingue stanno in attributi **accanto** allo stesso elemento:
+- testo → `data-en` / `data-fr` / `data-de` (usa `data-...-placeholder` per i placeholder, `data-...-aria` per gli aria-label; aggiungi `data-html` se il testo contiene tag come `<br>`/`<b>`)
+
+**Ogni volta che aggiungi o modifichi un testo visibile, DEVI aggiornare TUTTE e quattro le lingue** sullo stesso elemento. Mai lasciare un testo solo in italiano o aggiornarne solo alcune.
+
+Esempio corretto:
+```html
+<h2 data-en="Forged to last" data-fr="Forgés pour durer" data-de="Geschmiedet, um zu halten">Forgiati per durare</h2>
+<input placeholder="Mario Rossi"
+  data-en-placeholder="John Smith" data-fr-placeholder="Jean Dupont" data-de-placeholder="Max Mustermann">
+```
+
+Se manca la traduzione di una lingua, `i18n.js` ricade automaticamente sull'italiano — ma non è una scusa per ometterla.
+
+Per **aggiungere una nuova lingua** in futuro: aggiungi il codice in `LANGS` dentro `assets/js/i18n.js`, aggiungi un pulsante `data-lang="xx"` in **entrambi** i selettori lingua (il blocco `.lang-toggle` nell'header e il menu `.lang-dropdown__menu` compatto per mobile), e l'attributo `data-xx` corrispondente su ogni elemento tradotto.
+
+Glossario navigazione (mantenere coerente):
+| IT | EN | FR | DE |
+|---|---|---|---|
+| Home | Home | Accueil | Startseite |
+| Azienda | Company | Entreprise | Unternehmen |
+| Prodotti | Products | Produits | Produkte |
+| Stabilimenti | Plants | Sites | Standorte |
+| Contatti | Contact | Contact | Kontakt |
+| Richiedi preventivo | Get a quote | Demander un devis | Angebot anfordern |
+
+## Design system ("Campo & Forgia")
+
+- Colori (da logo): ink `#16202B`, corallo `#F8463A` (con `--coral-dark #D93227`), avorio `#F7F4EE`, sabbia `#E6DCC8`, acciaio `#8A95A1`. Tutto via variabili CSS in `:root`, incluse le variabili glass (`--glass-bg`, `--glass-border`).
+- Font: **Space Grotesk** (`--font-sans`, testo e display), **Space Mono** (`--font-mono`, dati/codici/eyebrow).
+- Firma visiva: **foto fissa a tutta pagina** dietro ai contenuti (`.frame__bg` + velo `.frame__overlay`), **navbar bianca a pillola** flottante (`.nav-pill`), card in **glassmorphism** (`.glass`). La sezione Contatti ha uno sfondo fotografico proprio.
+- Animazioni: reveal allo scroll a scaglioni (`.anim` + IntersectionObserver, ritardo `--d`), scrollspy che evidenzia la sezione attiva, contatori (`[data-count]`), marquee loghi clienti, mappa Leaflet lazy, clip video in pausa fuori vista, menu mobile e dropdown lingue. Rispettare sempre `prefers-reduced-motion`.
+
+## Note
+
+- **Placeholder da sostituire** (cerca i commenti `PLACEHOLDER` in `index.html` e `assets/js/app.js`): indirizzi reali (via e civico) dei 3 stabilimenti e sede legale, telefono (`+39 000 000 0000`), P.IVA (`IT00000000000`), coordinate esatte degli stabilimenti nella mappa (`initMap` in `app.js`, ora sui centri di Vestone e Barghe), i link Privacy/Cookie Policy nel footer (`href="#"`), e collegare il **form a un backend/endpoint** (ora è solo front-end, mostra un messaggio di conferma senza inviare).
+- Le **immagini sono reali** (loghi clienti, foto prodotti/campo, sfondi hero e contatti, poster video): stanno in `assets/img/`. Lo sfondo hero `hero-bg.png` è pesante (~2,4 MB): valutare una versione compressa/WebP.
+- Anteprima locale: servire la **root del progetto** con un server statico (es. `python -m http.server`) e aprire `index.html` — `file://` è bloccato per i moduli/asset.

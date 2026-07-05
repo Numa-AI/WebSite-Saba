@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(playwright-cli eval *)",
+      "Bash(playwright-cli screenshot *)",
+      "Bash(playwright-cli resize *)",
+      "Bash(playwright-cli click *)",
+      "Bash(playwright-cli reload *)",
+      "Bash(playwright-cli localstorage-set *)",
+      "Bash(playwright-cli goto *)",
+      "Bash(playwright-cli fill *)",
+      "Bash(playwright-cli check *)",
+      "Bash(rm -f hero-desktop.png s2.png s3.png s4.png s5.png s6.png s7.png m1.png m2.png m3.png p_prod.png p_en.png p_azienda.png p_contatti.png p_stab.png m_contatti.png home_en.png)",
+      "Bash(rm -rf .playwright-cli)",
+      "Bash(taskkill //F //IM python.exe)",
+      "Bash(pkill -f \"http.server 8765\")",
+      "Bash(playwright-cli close *)",
+      "Bash(rm -f fr_home.png de_prod.png de_mob.png)"
+    ]
+  }
+}
