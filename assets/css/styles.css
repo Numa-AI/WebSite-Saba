@@ -630,6 +630,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   .blog-track > .blog-card {
     flex: 0 0 calc((100% - 28px) / 3);   /* 3 card visibili (2 gap da 14px) */
     scroll-snap-align: start;
+    scroll-snap-stop: always;            /* uno scorrimento = una card */
     opacity: 1;                          /* nel carosello niente reveal a scaglioni */
     transform: none;
     filter: none;
@@ -681,8 +682,11 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 }
 
 /* Da mobile la griglia prodotti diventa un carosello scorribile in orizzontale:
-   la card al centro è ben visibile, le due adiacenti sbirciano ai lati e sfumano
-   verso lo sfondo. Sotto i 640px; sopra torna la griglia (2 e poi 3 colonne). */
+   la card al centro è ben visibile, le due adiacenti sbirciano ai lati. Sotto i
+   640px; sopra torna la griglia (2 e poi 3 colonne).
+   NB: niente mask-image sul contenitore: una mask crea un "backdrop root" che
+   disattiva il backdrop-filter (glassmorphism) delle card figlie, facendole
+   sembrare troppo trasparenti. Così le card restano sfocate come il resto. */
 @media (max-width: 639.98px) {
   .product-grid {
     display: flex;
@@ -695,14 +699,13 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;         /* Firefox: nasconde la barra di scorrimento */
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 26%, #000 74%, transparent 100%);
-            mask-image: linear-gradient(to right, transparent 0, #000 26%, #000 74%, transparent 100%);
   }
   .product-grid::-webkit-scrollbar { display: none; }   /* WebKit/Blink: idem */
 
   .product {
     flex: 0 0 74vw;                /* card centrale ~3/4 schermo, le vicine restano visibili */
     scroll-snap-align: center;
+    scroll-snap-stop: always;      /* uno swipe = una card, non salta le vicine */
     /* nel carosello le card sono sempre presenti: niente reveal a scaglioni
        (le vicine sbirciano oltre la soglia del reveal e resterebbero invisibili) */
     opacity: 1;
