@@ -14,8 +14,8 @@ desktop.ini
 # Screenshot temporanei / artefatti di test
 .playwright-cli/
 
-# File sorgente pesanti dei ricambi (input da cui sono derivati assets/img/prod-*.png)
-ChatGPT Image *.png
+# Sorgenti AI pesanti (input da cui sono derivati assets/img/prod-*.png e l'hero mobile)
+assets/sources/
 
 # Mockup di riferimento (non deployare)
 m-prod.png
