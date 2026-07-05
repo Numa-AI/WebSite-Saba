@@ -54,7 +54,7 @@ Glossario navigazione (mantenere coerente):
 
 - Colori (da logo): ink `#16202B`, corallo `#F8463A` (con `--coral-dark #D93227`), avorio `#F7F4EE`, sabbia `#E6DCC8`, acciaio `#8A95A1`. Tutto via variabili CSS in `:root`, incluse le variabili glass (`--glass-bg`, `--glass-border`).
 - Font: **Space Grotesk** (`--font-sans`, testo e display), **Space Mono** (`--font-mono`, dati/codici/eyebrow).
-- Firma visiva: **foto fissa a tutta pagina** dietro ai contenuti (`.frame__bg` + velo `.frame__overlay`), **navbar bianca a pillola** flottante (`.nav-pill`), card in **glassmorphism** (`.glass`). La sezione Contatti ha uno sfondo fotografico proprio. Lo sfondo fisso è un `<picture>`: sotto i 640px carica `hero-tractor-sunset-mobile.jpg` (ritaglio verticale della stessa scena, sole a sinistra e senza trattore, derivato con Pillow da `hero-tractor-sunset.png`), sopra la versione panoramica.
+- Firma visiva: **foto fissa a tutta pagina** dietro ai contenuti (`.frame__bg` + velo `.frame__overlay`), **navbar bianca a pillola** flottante (`.nav-pill`), card in **glassmorphism** (`.glass`). La sezione Contatti ha uno sfondo fotografico proprio. Lo sfondo fisso è un `<picture>`: sotto i 640px carica `hero-tractor-sunset-mobile.jpg` (scatto verticale generato della stessa scena, trattore in basso e sole a sinistra; sorgente `ChatGPT Image *.png` in root, in `.gitignore`), sopra la versione panoramica.
 - Animazioni: reveal allo scroll a scaglioni (`.anim` + IntersectionObserver, ritardo `--d`), scrollspy che evidenzia la sezione attiva, contatori (`[data-count]`), marquee loghi clienti, mappa Leaflet lazy, clip video in pausa fuori vista, menu mobile e dropdown lingue. Rispettare sempre `prefers-reduced-motion`.
 
 ## Note
