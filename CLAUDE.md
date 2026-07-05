@@ -8,7 +8,9 @@ Sito **a pagina unica** ("Fork Terra Nova"): tutto in `index.html`, con sezioni 
 
 ```text
 index.html                     Pagina unica (home, clienti, azienda, prodotti, blog, stabilimenti, contatti)
-assets/css/styles.css          Design system (variabili CSS, glassmorphism, componenti, animazioni)
+privacy-policy.html            Informativa privacy (pagina statica separata, solo italiano)
+cookie-policy.html             Cookie policy (pagina statica separata, solo italiano)
+assets/css/styles.css          Design system (variabili CSS, glassmorphism, componenti, animazioni) + stile .legal-page per le pagine legali
 assets/js/i18n.js              Motore traduzioni IT/EN/FR/DE (data-en/fr/de accanto all'italiano)
 assets/js/app.js               Reveal allo scroll, scrollspy, contatori, menu mobile, dropdown lingue, form, mappa
 assets/vendor/leaflet.css      Libreria mappa (locale, no CDN)
@@ -59,7 +61,8 @@ Glossario navigazione (mantenere coerente):
 
 ## Note
 
-- **Placeholder da sostituire** (cerca i commenti `PLACEHOLDER` in `index.html`): i link Privacy/Cookie Policy nel footer (`href="#"`), e collegare il **form a un backend/endpoint** (ora è solo front-end, mostra un messaggio di conferma senza inviare). Indirizzi, telefono (`+39 0365 81233`), sede legale, CAP e P.IVA (`IT00680570983`) sono **reali** (lug 2026); i pin della mappa (`initMap` in `app.js`) sono geocodificati sugli indirizzi e ritoccabili al metro. Dati legali completi (C.F. 02065590172, REA 290169, PEC sabapec@pec.saba-forging.it) non ancora nel sito, solo annotati in memoria.
+- **Placeholder da sostituire** (cerca i commenti `PLACEHOLDER` in `index.html`): collegare il **form a un backend/endpoint** (ora è solo front-end, mostra un messaggio di conferma senza inviare). Indirizzi, telefono (`+39 0365 81233`), sede legale, CAP e P.IVA (`IT00680570983`) sono **reali** (lug 2026); i pin della mappa (`initMap` in `app.js`) sono geocodificati sugli indirizzi e ritoccabili al metro.
+- **Privacy Policy e Cookie Policy** (lug 2026): `privacy-policy.html` e `cookie-policy.html`, pagine statiche a sé stanti (non sezioni della single-page), linkate dal footer e dal testo del consenso nel form contatti (`data-html` con `<a>` inline). **Solo in italiano per ora** — sono una prima bozza (dati reali: P.IVA, CF, REA, PEC, indirizzo), non ancora riviste da un legale; entrambe hanno un box `.legal-note` che lo segnala esplicitamente. Se si aggiungono strumenti di tracciamento (Analytics, pixel) la Cookie Policy va aggiornata e serve un banner di consenso (ora non serve: solo cookie tecnici + localStorage lingua + font/tile di terze parti).
 - Ci sono **due sezioni distinte**: **Prodotti** (`#prodotti`) e **Blog** (`#blog`), entrambe basate sulla griglia `.product-grid`.
   - **Prodotti** (`.product-grid`): 6 card catalogo (media, titolo, descrizione breve, tag, link "Richiedi info" `.product__more`). Tutte e 6 usano gli **scatti studio dei ricambi forgiati** su fondo scuro: `prod-mazze/coltelli/denti/zappe/vomeri/ricambi.png`.
   - **Blog** (`.blog-carousel` > `.product-grid.blog-track`): 4 post editoriali (`.blog-card`) con **foto di campo/trattori** (`field-*.jpg`); ogni card ha un eyebrow di categoria (`.blog-card__cat`) e un **articolo espandibile** `<details class="article">` in tutte e 4 le lingue (un `<p>` per paragrafo, ciascuno con `data-en/fr/de`). Da **desktop** è un **carosello a riga singola**: 3 card visibili + frecce `.blog-nav` (`data-blog-prev`/`data-blog-next`, JS in `app.js`) che scorrono **all'infinito** in entrambi i sensi. Aprendo un articolo (`:has(.article[open])`) la card va a **tutta larghezza** e le altre si nascondono (vista lettura); in quello stato le frecce **cambiano articolo** (prec/succ, un solo `<details open>` alla volta). Da **mobile** eredita il carosello a swipe di `.product-grid` (frecce nascoste, articolo che si espande in verticale). Articoli (aratura, trinciatura, semina, fresatura) scritti con la skill **humanizer** + ricerca web di agronomia.
