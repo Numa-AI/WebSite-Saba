@@ -904,8 +904,14 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   z-index: 0;
 }
 @media (max-width: 639.98px) {
-  /* Mappa solo visiva da mobile: niente drag/zoom che catturi lo swipe della pagina */
-  .contact-map__canvas { pointer-events: none; }
+  /* Mappa solo visiva da mobile: niente drag/zoom/tap che catturi lo swipe
+     della pagina. Leaflet riaccende pointer-events: auto su marker/controlli
+     nel suo CSS, quindi va forzato a none anche su tutti i discendenti. */
+  .contact-map__canvas,
+  .contact-map__canvas * {
+    pointer-events: none !important;
+    touch-action: pan-y !important;
+  }
 }
 /* Pin corallo numerati, come i tag delle card stabilimenti */
 .map-pin {
@@ -1274,6 +1280,14 @@ body.nav-open .mobile-menu li:nth-child(5) a { transition-delay: 0.43s; }
   .plant p { line-height: 1.45; }
   .product p { line-height: 1.4; }
   .article__body p { line-height: 1.5; }
+}
+
+/* Solo mobile: sottotitolo hero un po' piu' vicino al titolo, e titolo
+   spostato pochissimo piu' in alto (blocco centrato via flex, quindi il
+   margine negativo sul wrapper sposta tutto il gruppo) */
+@media (max-width: 639.98px) {
+  .section--hero .view__center { margin-top: -8px; }
+  .home__lead { margin-top: 10px; }
 }
 
 @media (min-width: 640px) {

@@ -251,6 +251,17 @@
         { tag: "03", name: "SABA · Trattamenti", town: "Via Provinciale, 10 · Barghe (BS)", ll: [45.6708, 10.4101] }
       ];
       var map = L.map(mapEl, { scrollWheelZoom: false });
+      /* Da mobile la mappa resta solo visiva: niente drag/zoom/tap, così
+         lo swipe verticale scorre la pagina invece di muovere la mappa
+         (rinforza il pointer-events:none via CSS sotto i 640px). */
+      if (window.matchMedia && window.matchMedia("(max-width: 639.98px)").matches) {
+        map.dragging.disable();
+        map.touchZoom.disable();
+        map.doubleClickZoom.disable();
+        map.boxZoom.disable();
+        map.keyboard.disable();
+        if (map.tap) map.tap.disable();
+      }
       L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
         maxZoom: 19
