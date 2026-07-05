@@ -16,3 +16,6 @@ desktop.ini
 
 # File sorgente pesanti dei ricambi (input da cui sono derivati assets/img/prod-*.png)
 ChatGPT Image *.png
+
+# Mockup di riferimento (non deployare)
+m-prod.png

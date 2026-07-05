@@ -20,7 +20,11 @@
     <section class="frame">
       <!-- Sfondo fotografico + velo di leggibilità -->
       <div class="frame__bg" aria-hidden="true">
-        <img src="assets/img/hero-tractor-sunset.png" alt="" />
+        <picture>
+          <!-- Da mobile: ritaglio verticale della stessa scena (sole a sinistra, niente trattore) -->
+          <source media="(max-width: 639.98px)" srcset="assets/img/hero-tractor-sunset-mobile.jpg" />
+          <img src="assets/img/hero-tractor-sunset.png" alt="" />
+        </picture>
         <div class="frame__overlay"></div>
       </div>
 
