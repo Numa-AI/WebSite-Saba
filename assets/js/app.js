@@ -236,9 +236,9 @@
     });
   }
 
-  /* ---------- Mappa stabilimenti (Leaflet + tile scure CARTO) ----------
-     PLACEHOLDER coordinate: centri dei comuni di Vestone e Barghe.
-     Sostituire con le coordinate esatte degli stabilimenti.       */
+  /* ---------- Mappa stabilimenti (Leaflet + tile chiare CARTO) ----------
+     Coordinate geocodificate sugli indirizzi reali degli stabilimenti;
+     ritoccabili al metro se serve.                                */
   var mapEl = document.getElementById("map");
   if (mapEl && window.L) {
     var mapInited = false;
@@ -246,9 +246,9 @@
       if (mapInited) return;
       mapInited = true;
       var plants = [
-        { tag: "01", name: "SABA · Forgiatura", town: "Vestone (BS)", ll: [45.7089, 10.3989] },
-        { tag: "02", name: "SABA · Trattamenti", town: "Barghe (BS)", ll: [45.6790, 10.4040] },
-        { tag: "03", name: "SABA · Finitura", town: "Barghe (BS)", ll: [45.6742, 10.4061] }
+        { tag: "01", name: "SABA · Forgiatura", town: "Loc. Fornaci, 9 · Vestone (BS)", ll: [45.7067, 10.3919] },
+        { tag: "02", name: "SABA · Forgiatura automatizzata", town: "Strada di Ponte Re · Barghe (BS)", ll: [45.6914, 10.3963] },
+        { tag: "03", name: "SABA · Trattamenti", town: "Via Provinciale, 10 · Barghe (BS)", ll: [45.6708, 10.4101] }
       ];
       var map = L.map(mapEl, { scrollWheelZoom: false });
       L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
