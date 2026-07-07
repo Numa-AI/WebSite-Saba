@@ -44,6 +44,26 @@
     cached = true;
   }
 
+  /* Lingua preferita dal browser, se tra quelle supportate (altrimenti null).
+     Legge navigator.languages (es. ["en-US","en","it"]) e ne prende la prima
+     il cui codice primario ("en-US" -> "en") è tra LANGS. Nessuna chiamata di
+     rete, nessun permesso: usa solo l'impostazione lingua del dispositivo. */
+  function detectBrowserLang() {
+    var list = [];
+    try {
+      if (navigator.languages && navigator.languages.length) {
+        list = navigator.languages;
+      } else if (navigator.language) {
+        list = [navigator.language];
+      }
+    } catch (e) { return null; }
+    for (var i = 0; i < list.length; i++) {
+      var code = String(list[i] || "").toLowerCase().split("-")[0];
+      if (LANGS.indexOf(code) !== -1) return code;
+    }
+    return null;
+  }
+
   /* Ritorna la traduzione per la lingua, con fallback sull'italiano. */
   function pick(el, lang, suffix) {
     var it = el.getAttribute("data-it" + suffix);
@@ -83,7 +103,12 @@
 
   function init() {
     var stored = getStored();
-    var initial = LANGS.indexOf(stored) !== -1 ? stored : "it";
+    /* Precedenza: 1) scelta salvata dall'utente, 2) lingua del browser al
+       primo accesso, 3) italiano. Salvando la scelta manuale (store in
+       applyLang) l'auto-rilevamento non sovrascrive più le visite successive. */
+    var initial = LANGS.indexOf(stored) !== -1
+      ? stored
+      : (detectBrowserLang() || "it");
     applyLang(initial);
     document.querySelectorAll("[data-lang]").forEach(function (btn) {
       btn.addEventListener("click", function () { applyLang(btn.getAttribute("data-lang")); });
