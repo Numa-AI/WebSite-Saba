@@ -7,6 +7,20 @@
    ============================================================ */
 
 @font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../vendor/fonts/archivo.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../vendor/fonts/montserrat.woff2") format("woff2");
+}
+@font-face {
   font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 400 700;
@@ -43,8 +57,9 @@
 
   --radius-card: 18px;
 
-  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Space Mono", ui-monospace, monospace;
+  --font-lead: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -321,6 +336,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   text-wrap: balance;
 }
 .view__lead {
+  font-family: var(--font-lead);
   margin-top: 16px;
   max-width: 34rem;
   color: rgba(255, 255, 255, 0.9);
@@ -352,6 +368,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 }
 .home__title .coral { color: var(--coral); }
 .home__lead {
+  font-family: var(--font-lead);
   margin: 22px auto 0;
   max-width: 36rem;
   font-size: clamp(0.98rem, 1.6vw, 1.15rem);
@@ -538,10 +555,11 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 .blog-card__cat {
   margin-top: 2px;
   font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: #FF6459;                 /* corallo più acceso per staccare sulla card */
 }
 .blog-card h3 { margin-top: 4px; }
 
@@ -626,6 +644,11 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   .blog-track > .blog-card:has(.article[open]) .product__media {
     aspect-ratio: auto;
     height: clamp(240px, 34vh, 380px);
+  }
+  /* In lettura la card è a tutta larghezza: il testo usa una sola colonna
+     che riempie tutta la larghezza, invece di restare stretto a sinistra. */
+  .blog-track > .blog-card:has(.article[open]) .article__body {
+    max-width: none;
   }
 }
 
@@ -766,9 +789,10 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   font-weight: 700;
 }
 .plant__role {
-  font-family: var(--font-mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.06em;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -1309,11 +1333,11 @@ body.nav-open .mobile-menu li:nth-child(5) a { transition-delay: 0.43s; }
      di lasciare tutto il padding della sezione vuoto sotto la barra. */
   .section { padding: 96px 16px; scroll-margin-top: 44px; }
   .section--hero { padding-top: 150px; padding-bottom: 56px; }
-  /* Da desktop il blocco hero (titolo, testo, CTA) è spostato un po' verso
-     sinistra rispetto al centro, per dare più respiro sul lato destro.
-     Shift proporzionale alla larghezza: modesto e senza spingere il titolo
-     (white-space: nowrap) oltre il bordo dello schermo. */
-  .section--hero .view__center { transform: translateX(clamp(-13rem, -10vw, -3rem)); }
+  /* Da desktop il blocco hero (titolo, testo, CTA) è allineato a sinistra.
+     La fascia .home__bottom resta a tutta larghezza (space-between). */
+  .section--hero { text-align: left; }
+  .home__lead { margin-left: 0; margin-right: 0; }
+  .home__cta { justify-content: flex-start; align-items: flex-start; }
   .section--clients { padding-top: 24px; padding-bottom: 72px; }
   #contatti { scroll-margin-top: 0; }
   .home__pills { display: flex; }
