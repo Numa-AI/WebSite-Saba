@@ -528,9 +528,10 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 }
 .tags { margin-top: 13px; display: flex; flex-wrap: wrap; gap: 6px; }
 .tags span {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.04em;
+  font-family: var(--font-lead);
+  font-weight: 500;
+  font-size: 0.64rem;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
   padding: 4px 9px;
@@ -789,7 +790,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   font-weight: 700;
 }
 .plant__role {
-  font-family: var(--font-sans);
+  font-family: var(--font-lead);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.04em;
